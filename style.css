@@ -1,0 +1,90 @@
+/* styles.css */
+
+/* 全局设置 */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* 导航栏 */
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107;
+}
+
+/* 主页横幅 */
+.header {
+    background-image: url('header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.header .title {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.header .description {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.header .actions {
+    margin-top: 40px;
+}
+
+.header .btn-primary {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #343a40;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.header .btn-primary:hover {
+    background-color: #ffca2c;
+    border-color: #ffca2c;
+    color: #343a40;
+}
+
+/* 页脚 */
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.footer h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .header .title {
+        font-size: 2.5rem;
+    }
+
+    .header .description {
+        font-size: 1.2rem;
+    }
+}
