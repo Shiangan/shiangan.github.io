@@ -1,85 +1,121 @@
-/* styles.css */
-
-/* 全局设置 */
-body {
-    font-family: 'Roboto', Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f8f9fa;
-    color: #333;
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* 导航栏 */
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Navbar styles */
 .navbar {
     background-color: #343a40;
 }
 
-.navbar-brand {
-    font-size: 1.5rem;
+.navbar-brand img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 15px;
 }
 
 .navbar-nav .nav-link {
-    color: #fff;
-    font-weight: 500;
+    color: #ffffff;
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 
-.navbar-nav .nav-link:hover {
-    color: #ffc107;
+.navbar-toggler {
+    color: #ffffff;
+    border-color: #ffffff;
 }
 
-/* 主页横幅 */
+/* Header styles */
 .header {
-    background-image: url('header-bg.jpg');
+    background-image: url('background.jpg');
     background-size: cover;
-    background-position: center;
-    color: #fff;
+    background-position: center center;
+    color: #ffffff;
     text-align: center;
     padding: 100px 0;
 }
 
 .header .title {
-    font-size: 3.5rem;
-    font-weight: 700;
+    font-size: 3rem;
+        font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .header .description {
     font-size: 1.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .header .actions {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
-.header .btn-primary {
-    background-color: #ffc107;
-    border-color: #ffc107;
-    color: #343a40;
-    padding: 10px 20px;
-    font-size: 1rem;
+.header .actions a {
     margin-right: 10px;
 }
 
-.header .btn-primary:hover {
-    background-color: #ffca2c;
-    border-color: #ffca2c;
-    color: #343a40;
+.btn-primary {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
-/* 页脚 */
+.btn-primary:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+/* Footer styles */
 .footer {
     background-color: #343a40;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
-    padding: 50px 0;
+    padding: 30px 0;
 }
 
 .footer h3 {
     font-size: 1.2rem;
-    font-weight: 400;
+    margin-bottom: 0;
 }
 
-/* 响应式设计 */
+.footer p {
+    font-size: 0.8rem;
+}
+
+/* Responsive styles */
 @media (max-width: 768px) {
+    .navbar-nav .nav-item {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
     .header .title {
         font-size: 2.5rem;
     }
