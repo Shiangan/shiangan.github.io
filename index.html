@@ -505,6 +505,14 @@
         // 使用 JavaScript 动态加载敏感内容
         const secretContent = "這是敏感內容，不能被輕易查看！";
         document.getElementById('content').innerText = secretContent;
+    function decrypt(text) {
+        return atob(text); // Base64 解码
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const encryptedText = "5LiA5LqG5Y+3"; // 这是 Base64 编码
+        document.getElementById('content').innerText = decrypt(encryptedText);
+    });
     </script>
 
     <section data-bs-version="5.1" class="menu menu5 cid-ugTnEE6zPA" once="menu" id="menu05-1q">
