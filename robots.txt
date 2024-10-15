@@ -4,4 +4,4 @@ Disallow: /login/         # 禁止访问登录页面
 Disallow: /private/       # 隐藏私人或不需要公开的文件夹
 Allow: /
 
-Sitemap: https://www.24hour.xn--kpry57d.com.tw/sitemap.xml  # 请替换为你的实际网站地图地址
+Sitemap: https://www.24hour.台灣/sitemap.xml
