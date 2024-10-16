@@ -7,4 +7,6 @@
     SetHandler application/x-httpd-php
 </FilesMatch>
 
-Options +Indexes
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /
