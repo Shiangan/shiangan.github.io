@@ -817,69 +817,51 @@
         </div>
     </section>
 
-    <section data-bs-version="5.1" class="form5 cid-uqYB7Qpzme" id="form02-cp">
-
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 content-head">
-                    <div class="mbr-section-head mb-5">
-                        <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-4">
-                            <strong>
-                                <br>
-                            </strong>
-                            <strong>
-                                <br>
-                            </strong>
-                        </h3>
-                        <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-5">請留下您的資訊</h4>
-                    </div>
+   <section class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h4 class="text-center">請留下您的資訊</h4>
+            <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler">
+                
+                <!-- 聯絡人稱謂 -->
+                <div class="form-group mb-3">
+                    <label>貴客稱呼：</label><br>
+                    <input type="radio" name="gender" value="先生"> 先生
+                    <input type="radio" name="gender" value="小姐"> 小姐
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                    <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name">
-                        <input type="hidden" name="email" data-form-email="true" value="fIgiS4t+IpBmcJA3eHUpOHHScih7dGC8fx3aEHILWb6lC55iZa0mWgNRBYUdovnQ+4h+p+A9UJ6dC6A894YePjmQIaDpfk0WH94C8S4deqEvyCtY6LArQJCxnw1CytNg">
-                        <div class="row">
-                            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">感謝您的來信，禮儀師盡快回覆您！</div>
-                            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                                                        Oops...! some problem!
-                                                    </div>
-                        </div>
-                        <div class="dragArea row">
-                            <div class="col-md col-sm-12 form-group mb-3" data-for="name">
-                                <input type="text" name="name" placeholder="您的姓名" data-form-field="name" class="form-control" value="" id="name-form02-cp">
-                            </div>
-
-                            <div class="col-12 form-group mb-3" data-for="phone">
-                                <input type="tel" name="phone" placeholder="您的聯絡電話" data-form-field="phone" class="form-control" value="" id="phone-form02-cp">
-                            </div>
-                            <div class="col-12 form-group mb-3" data-for="textarea">
-                                <textarea name="textarea" placeholder="想諮詢的部分" data-form-field="textarea" class="form-control" id="textarea-form02-cp"></textarea>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
-                                <button type="submit" class="btn btn-primary display-7">
-                                    送出訊息
-                                    <br>
-                                </button>
-                            </div>
-                        </div>
-                        <span class="gdpr-block">
-                            <label>
-                                <span class="textGDPR display-7" style="color: #a7a7a7">
-                                    <input type="checkbox" name="gdpr" id="gdpr-form02-cp" required="">
-                                    By continuing you agree to our 
-                                    <a style="color: #149dcc; text-decoration: none;" href="terms.html">Terms of Service</a>
-                                     and 
-                                    <a style="color: #149dcc; text-decoration: none;" href="policy.html">Privacy Policy</a>
-                                    .
-                                </span>
-                            </label>
-                        </span>
-                    </form>
+                
+                <!-- 聯絡電話 -->
+                <div class="form-group mb-3">
+                    <input type="tel" name="phone" class="form-control" placeholder="您的聯絡電話">
                 </div>
-            </div>
+
+                
+                <div class="form-group mb-3">
+                    <label>選擇您的宗教儀式：</label><br>
+                    <input type="checkbox" name="organization" value="創價學會"> 創價學會<br>
+                    <input type="checkbox" name="organization" value="日蓮正宗"> 日蓮正宗
+                </div>
+
+                
+                <!-- 想諮詢的部分 -->
+                <div class="form-group mb-3">
+                    <textarea name="textarea" class="form-control" placeholder="想諮詢的部分"></textarea>
+                </div>
+                
+                
+                
+                
+    
+                <!-- 提交按鈕 -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">送出訊息</button>
+                </div>
+                
+            <form action="send_email.php" method="POST">
+            </form>
         </div>
-    </section>
+    </div>
+</section>
 
     <section data-bs-version="5.1" class="footer1 cid-uqYZviHvly mbr-parallax-background" once="footers" id="footer01-cr">
 
