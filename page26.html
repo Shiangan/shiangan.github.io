@@ -805,56 +805,47 @@
 
     <section data-bs-version="5.1" class="article16 cid-uqYy4PES75" id="article16-cm">
 
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-12 col-lg-7">
-                    <div class="mbr-section-btn align-center">
-                        <a class="btn btn-secondary display-4" href="tel:+886938179858">☎️24H禮儀專線</a>
-                        <a class="btn btn-secondary display-4" href="https://line.me/ti/p/TuM5y_Of6I" target="_blank">✉️LINE線上諮詢</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<section class="container">
+    
+<section class="container py-5">
     <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <h4 class="text-center mb-4">請留下您的資訊</h4>
+        <div class="col-lg-6">
+            <h4 class="text-center mb-4" style="font-family: 'Arial', sans-serif; font-weight: bold; color: #000;">請留下您的資訊</h4>
             
-            <form action="https://mobirise.eu/" method="POST">
+            <form action="https://mobirise.eu/" method="POST" style="padding: 20px; border-radius: 5px;">
+
                 <div class="form-group mb-3">
-                    <label for="guestTitle">貴客稱呼</label>
-                    <select name="guestTitle" id="guestTitle" class="form-control">
+                    <label for="name" style="font-weight: 500;">貴客姓名</label>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="請輸入姓名" style="padding: 10px;">
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="guestTitle" style="font-weight: 500;">貴客稱呼</label>
+                    <select name="guestTitle" id="guestTitle" class="form-control" style="padding: 10px;">
                         <option value="先生">先生</option>
                         <option value="小姐">小姐</option>
                     </select>
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="name">貴客姓名</label>
-                    <input type="text" name="name" class="form-control" id="name" placeholder="請輸入姓名">
+                    <label for="contact" style="font-weight: 500;">聯絡電話</label>
+                    <input type="tel" name="phone" class="form-control" id="contact" placeholder="請輸入聯絡電話" style="padding: 10px;">
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="contact">聯絡電話</label>
-                    <input type="tel" name="phone" class="form-control" id="contact" placeholder="請輸入聯絡電話">
-                </div>
-
-                <div class="form-group mb-3">
-                    <label for="group">宗教儀式</label><br>
+                    <label for="group" style="font-weight: 500;">宗教儀式</label><br>
                     <input type="checkbox" name="sokaGakkai" id="sokaGakkai"> 創價學會
-                    <input type="checkbox" name="nichiren" id="nichiren"> 日蓮正宗
+                    <input type="checkbox" name="nichiren" id="nichiren" style="margin-left: 10px;"> 日蓮正宗
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="inquiry">想詢問的</label>
-                    <textarea name="inquiry" id="inquiry" class="form-control" placeholder="請輸入想詢問的部分"></textarea>
-                </div> 
+                    <label for="inquiry" style="font-weight: 500;">想詢問的</label>
+                    <textarea name="inquiry" id="inquiry" class="form-control" placeholder="請輸入想詢問的部分" style="padding: 10px;"></textarea>
+                </div>
 
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary">送出訊息</button>
+                    <button type="submit" class="btn btn-primary px-4 py-2" style="font-size: 16px;">送出訊息</button>
                 </div>
+
             </form>
         </div>
     </div>
