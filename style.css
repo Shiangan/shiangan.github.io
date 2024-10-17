@@ -11,15 +11,7 @@
 </head>
 
 <body>
-<div class="banner align-center">
-    <button type="button" onclick="document.getElementById('mobiriseBanner').classList.add('container-banner-closing')" class="btn-close" aria-label="Close" style="position: fixed;top: 16px;right: 16px;"></button>
-    <p class="mbr-text mbr-fonts-style display-7">The site was created with Mobirise Free <a href="https://mobirise.com/" class="mbr-black">Website Builder Software</a></p>
-    <div class="mbr-section-btn">
-      <a class="btn btn-sm btn-primary display-4" href="https://mobirise.com/">Create Your Website!</a>
-      <a class="btn btn-sm btn-secondary display-4" href="https://mobirise.com/p/?u=3299351">Remove This Banner</a>
-    </div>
-  </div>
-</div>
+
   
   <section data-bs-version="5.1" class="menu menu5 cid-ugTnEE6zPA" once="menu" id="menu05-1q">
 	
@@ -28,8 +20,8 @@
 		<div class="container">
 			<div class="navbar-brand">
 				<span class="navbar-logo">
-					<a href="https://mobiri.se">
-						<img src="https://r.mobirisesite.com/528007/assets/images/gc6109df110120705e2ee3075b19c-h_lxx5ob8i.jpg" alt="Mobirise Website Builder" style="height: 3.6rem;">
+					<a href="https://24hour.xn--kpry57d/">
+						<img src="https://24hour.xn--kpry57d/path/to/gc6109df110120705e2ee3075b19c-h_lxx5ob8i.jpg" alt="Mobirise Website Builder" style="height: 3.6rem;">
 					</a>
 				</span>
 				
@@ -106,17 +98,30 @@
 					</div>
 
 					<div class="card-box align-left mb-3 card-content-text">
-						<h4 class="card-title mbr-fonts-style mbr-white mb-0 display-2">
-							關於我們
-						</h4>
-						<p class="mbr-text mbr-fonts-style mt-3 mb-0 display-4">        祥安生命有限公司，97年成立公司，至今，已有多年的專業禮儀服務經驗，親力親為，陪伴家人，更是三重在地第一間，以現代化禮儀的方式呈現，為家人們擬場屬於至親的客製化禮儀包單，溫馨又不失古禮，用心陪伴逝者、陪伴家人，走完最後這一趟旅程。<br></p>
-
-						<p class="mbr-text mbr-fonts-style mt-3 mb-0 display-4">         24H 提供免費禮儀諮詢，提供最實惠且實在的禮儀價格，以您的需求，做最實際的行動。<br>  <br>         中式禮儀服務（佛道教）、西式禮儀服務（基督教、天主教）、日式教會禮儀服務（日蓮正宗、創價學會）、以及軒轅教禮儀服務…等，各類宗教皆有專業引導服務。<br><br>        祥安生命用溫暖人心的陪伴，打造完美的閉幕典禮，不忘初心，我們更堅持，將價格透明公開化，更希望傾聽家人的的需求，擬出最適合家人的客製化包單。<br> <br>    用愛，譜寫人生最終章，<br>    用心，做好禮儀師的職責。</p>
-
-						<p class="mbr-text mbr-fonts-style mt-3 mb-0 display-4">                                                                                            禮儀師     陳柏元<br>                                                                                                                     24H 服務專線</p><p><em>  0938-179-858</em></p><br><p>聆聽家人們的訴求，做有溫度的追思紀念</p><p>一同緬懷逝去的親人，感受生命的價值與美好</p>
-
-						
-					</div>
+    <h4 class="card-title mbr-fonts-style mbr-white mb-0 display-2">關於我們</h4>
+    <p class="mbr-text mbr-fonts-style mt-3 mb-0 display-4">
+        祥安生命有限公司，97年成立公司，至今，已有多年的專業禮儀服務經驗，親力親為，陪伴家人，更是三重在地第一間，以現代化禮儀的方式呈現，為家人們擬場屬於至親的客製化禮儀包單，溫馨又不失古禮，用心陪伴逝者、陪伴家人，走完最後這一趟旅程。
+    </p>
+    <p class="mbr-text mbr-fonts-style mt-3 mb-0 display-4">
+        24H 提供免費禮儀諮詢，提供最實惠且實在的禮儀價格，以您的需求，做最實際的行動。
+        <br><br>
+        中式禮儀服務（佛道教）、西式禮儀服務（基督教、天主教）、日式教會禮儀服務（日蓮正宗、創價學會）、以及軒轅教禮儀服務…等，各類宗教皆有專業引導服務。
+        <br><br>
+        祥安生命用溫暖人心的陪伴，打造完美的閉幕典禮，不忘初心，我們更堅持，將價格透明公開化，更希望傾聽家人的需求，擬出最適合家人的客製化包單。
+        <br><br>
+        用愛，譜寫人生最終章，<br>
+        用心，做好禮儀師的職責。
+    </p>
+    <p class="mbr-text mbr-fonts-style mt-3 mb-0 display-4">
+        禮儀師 陳柏元
+        <br>
+        24H 服務專線
+    </p>
+    <p><em>0938-179-858</em></p>
+    <br>
+    <p>聆聽家人們的訴求，做有溫度的追思紀念</p>
+    <p>一同緬懷逝去的親人，感受生命的價值與美好</p>
+</div>
 				</div>
 			</div>
 		</div>
