@@ -798,25 +798,40 @@
 
     <section data-bs-version="5.1" class="header18 cid-ugOa3JKo0P mbr-fullscreen" id="header18-1k">
     <!-- 视频背景 -->
-    <video id="backgroundVideo" style="display:none;" autoplay muted loop>
-        <source src="https://24hour.xn--kpry57d/assets/videos/祥安生命禮儀公司 0938-179-858.mp4" type="video/mp4">
-        您的浏览器不支持 HTML5 视频标签。
-    </video>
-</section>
+    <video id="backgroundVideo" style="display:none;" autoplay muted loop preload="auto">
+    <source src="https://24hour.xn--kpry57d/assets/videos/祥安生命禮儀公司 0938-179-858.mp4" type="video/mp4">
+    您的浏览器不支持 HTML5 视频标签。
+</video>
+
+        <style>
+            /* 确保背景视频全屏显示，并保持比例 */
+#backgroundVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保持视频比例并覆盖整个部分 */
+    z-index: -1; /* 确保视频在内容的后面 */
+    display: none; /* 默认隐藏，滚动到时显示 */
+}
+        </style>
 
 <script>
-    window.addEventListener('scroll', function() {
-        var videoBackground = document.getElementById('backgroundVideo');
-        var section = document.getElementById('header18-1k');
-        var rect = section.getBoundingClientRect();
-        
-        // 当用户滚动到该部分时，显示视频
-        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+   window.addEventListener('scroll', function() {
+    var videoBackground = document.getElementById('backgroundVideo');
+    var section = document.getElementById('header18-1k');
+    var rect = section.getBoundingClientRect();
+
+    // 当用户滚动到该部分时显示视频
+    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+        if (videoBackground.style.display === 'none') {
             videoBackground.style.display = 'block';  // 显示视频
-        } else {
-            videoBackground.style.display = 'none';  // 当用户滚动离开该部分时隐藏视频
         }
-    });
+    } else {
+        videoBackground.style.display = 'none';  // 用户滚动离开时隐藏视频
+    }
+});
 
 </script>
          
