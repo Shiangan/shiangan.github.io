@@ -798,7 +798,7 @@
 
 <section data-bs-version="5.1" class="header18 cid-ugOa3JKo0P mbr-fullscreen" id="header18-1k">
     <!-- 视频背景 -->
-    <video id="backgroundVideo" autoplay muted loop preload="auto" style="display: block;">
+    <video id="backgroundVideo" autoplay muted loop preload="auto">
         <source src="https://24hour.xn--kpry57d/assets/videos/祥安生命禮儀公司%200938-179-858.mp4" type="video/mp4">
         您的浏览器不支持 HTML5 视频标签。
     </video>
@@ -830,6 +830,13 @@
             z-index: 1; /* 确保内容在视频之上 */
             text-align: center; /* 文本居中 */
             color: white; /* 设置文本颜色 */
+            padding: 20px; /* 添加内边距 */
+            max-width: 800px; /* 限制内容的最大宽度 */
+        }
+
+        /* 按钮样式 */
+        .mbr-section-btn .btn {
+            margin: 5px; /* 添加按钮之间的间距 */
         }
     </style>
 
