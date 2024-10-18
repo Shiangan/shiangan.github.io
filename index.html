@@ -797,10 +797,10 @@
             </div>
         </nav>
     </section>
-
+                                
 <section data-bs-version="5.1" class="header18 cid-ugOa3JKo0P mbr-fullscreen" id="header18-1k">
     <!-- 视频背景 -->
-    <video id="backgroundVideo" autoplay muted loop preload="metadata" playsinline style="display: block;">
+    <video id="backgroundVideo" autoplay muted loop preload="metadata" playsinline>
         <source src="https://24hour.xn--kpry57d/assets/videos/祥安生命禮儀公司 0938-179-858.mp4" type="video/mp4">
         您的浏览器不支持 HTML5 视频标签。
     </video>
@@ -819,60 +819,34 @@
 
         /* 确保部分具有相对定位 */
         .header18 {
-            position: relative; /* 确保子元素定位基于该部分 */
-            overflow: hidden; /* 隐藏溢出的内容 */
-            height: 100vh; /* 确保部分高度为视口高度 */
-            display: flex; /* 使用弹性布局 */
-            align-items: center; /* 垂直居中对齐 */
-            justify-content: center; /* 水平居中对齐 */
-            padding: 20px; /* 添加内边距以避免内容接触边缘 */
-            box-sizing: border-box; /* 确保内边距和边框计算在元素的总宽度和高度内 */
+            position: relative; 
+            overflow: hidden; 
+            height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 20px; 
+            box-sizing: border-box; 
+        }
+
+        /* 添加透明覆盖 */
+        .mbr-overlay {
+            opacity: 0.6; /* 可以调整透明度 */
+            background-color: rgba(166, 169, 156, 0.5); /* 背景色也设置为透明 */
         }
 
         /* 额外的内容样式 */
         .content-wrap {
-            z-index: 1; /* 确保内容在视频之上 */
-            text-align: center; /* 文本居中 */
-            color: white; /* 设置文本颜色 */
-            padding: 20px; /* 添加内边距 */
-            max-width: 800px; /* 限制内容的最大宽度 */
-            margin: auto; /* 水平居中 */
-        }
-
-        /* 按钮样式 */
-        .mbr-section-btn .btn {
-            margin: 5px; /* 添加按钮之间的间距 */
-            padding: 10px 20px; /* 添加内边距 */
-            font-size: 16px; /* 设置按钮字体大小 */
-        }
-
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .content-wrap h1 {
-                font-size: 24px; /* 调整标题字体大小 */
-            }
-            .content-wrap p {
-                font-size: 18px; /* 调整段落字体大小 */
-            }
-            .mbr-section-btn .btn {
-                font-size: 14px; /* 调整按钮字体大小 */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .content-wrap h1 {
-                font-size: 20px; /* 更小屏幕的标题字体大小 */
-            }
-            .content-wrap p {
-                font-size: 16px; /* 更小屏幕的段落字体大小 */
-            }
-            .mbr-section-btn .btn {
-                padding: 8px 16px; /* 更小屏幕的按钮内边距 */
-            }
+            z-index: 1; 
+            text-align: center; 
+            color: white; 
+            padding: 20px; 
+            max-width: 800px; 
+            margin: auto; 
         }
     </style>
 
-    <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(166, 169, 156);"></div>
+    <div class="mbr-overlay"></div>
     <div class="container-fluid">
         <div class="row">
             <div class="content-wrap col-12 col-md-8">
@@ -887,26 +861,11 @@
                 </p>
 
                 <div class="mbr-section-btn">
-                    <a class="btn btn-primary display-4" href="tel:+886938179858">
-                        <span class="socicon socicon-viber mbr-iconfont mbr-iconfont-btn"></span>
-                        <font style="vertical-align: inherit;">24小時免費諮詢</font>
-                    </a>
-                    <a class="btn btn-primary display-4" href="https://line.me/ti/p/TuM5y_Of6I" target="_blank">
-                        <span class="socicon socicon-line mbr-iconfont mbr-iconfont-btn"></span>
-                        <font style="vertical-align: inherit;">24小時禮儀服務</font>
-                    </a>
-                    <a class="btn btn-primary display-4" href="https://www.facebook.com/shianganlife/?locale=zh_TW" target="_blank">
-                        <span class="socicon socicon-facebook mbr-iconfont mbr-iconfont-btn"></span>
-                        <font style="vertical-align: inherit;">Facebook</font>
-                    </a>
-                    <a class="btn btn-primary display-4" href="https://maps.app.goo.gl/fUVUDadRe36L3Dnn9?g_st=il" target="_blank">
-                        <span class="socicon socicon-googlemaps mbr-iconfont mbr-iconfont-btn"></span>
-                        <font style="vertical-align: inherit;">地圖</font>
-                    </a>
-                    <a class="btn btn-primary display-4" href="page1.html#features028-25" target="_blank">
-                        <span class="mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-                        <font style="vertical-align: inherit;">訂購花籃</font>
-                    </a>
+                    <a class="btn btn-primary display-4" href="tel:+886938179858">24小時免費諮詢</a>
+                    <a class="btn btn-primary display-4" href="https://line.me/ti/p/TuM5y_Of6I" target="_blank">24小時禮儀服務</a>
+                    <a class="btn btn-primary display-4" href="https://www.facebook.com/shianganlife/?locale=zh_TW" target="_blank">Facebook</a>
+                    <a class="btn btn-primary display-4" href="https://maps.app.goo.gl/fUVUDadRe36L3Dnn9?g_st=il" target="_blank">地圖</a>
+                    <a class="btn btn-primary display-4" href="page1.html#features028-25" target="_blank">訂購花籃</a>
                 </div>
             </div>
         </div>
