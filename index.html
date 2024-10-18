@@ -831,8 +831,14 @@
 
         /* 添加透明覆盖 */
         .mbr-overlay {
+            position: absolute; /* 确保覆盖在视频上 */
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
             opacity: 0.6; /* 可以调整透明度 */
-            background-color: rgba(166, 169, 156, 0.5); /* 背景色也设置为透明 */
+            background-color: rgba(166, 169, 156, 0.5); /* 设置透明背景色 */
+            z-index: 0; /* 确保在视频之上但在内容之下 */
         }
 
         /* 额外的内容样式 */
