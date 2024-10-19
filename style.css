@@ -79,25 +79,71 @@
     </div>
 </section>
 
-<section data-bs-version="5.1" class="article01 cid-ugMgCjGe5h" data-bg-video="https://youtu.be/_ZbzFF14_lQ" id="about-us-1-ugMgCjGe5h">
-	
+<section class="header18" style="position: relative; overflow: hidden; height: 100vh;" id="header18-1k">
+    <!-- 背景影片 -->
+    <video autoplay muted loop playsinline id="background-video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+        <source src="" type="video/mp4">
+        您的浏览器不支持视频播放。
+    </video>
+    
+    <!-- 备用背景图片 -->
+    <img src="https://24hour.xn--kpry57d/影像.png" alt="背景图" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; display: none;" id="background-image">
 
-	<div class="mbr-fallback-image disabled"></div>
-	<div class="mbr-overlay" style="opacity: 0.9; background-color: rgb(255, 255, 255);"></div>
-	<div class="container-fluid">
-		<div class="row justify-content-center">
-			<div class="card col-md-12 col-lg-6">
-				<div class="card-wrapper">
-					<div class="row">
-						<div class="image-wrapper col-12 col-sm-6 justify-content-center">
-							<img src="https://r.mobirisesite.com/528007/assets/images/background1-h_lxw1uemu.jpg" alt="Mobirise Website Builder" loading="lazy">
-						</div>
-						<div class="image-wrapper col-12 col-sm-6 justify-content-center">
-							<img src="https://r.mobirisesite.com/528007/assets/images/gc6109df110120705e2ee3075b19c-h_ly1jbt45.jpg" alt="Mobirise Website Builder" loading="lazy">
-						</div>
-					</div>
+    <!-- 覆蓋的透明層 -->
+    <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(166, 169, 156);"></div>
 
-					<div class="card-box align-left mb-3 card-content-text">
+    <!-- 內容區 -->
+    <div class="container-fluid" style="position: relative; z-index: 1; height: 100%; display: flex; align-items: center; justify-content: center; text-align: center;">
+        <div class="row w-100">
+            <div class="content-wrap col-12 col-md-6">
+                <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-5" style="font-size: 2.5em; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+                    <strong>祥安生命</strong>
+                    <br>聆聽您的訴求
+                </h1>
+
+                <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-4" style="font-size: 1.5em; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">
+                    獨一無二 追思儀式<br>願逝者能得到最美的祝福
+                </p>
+
+                <div class="mbr-section-btn">
+                    <a class="btn btn-primary display-4" href="tel:+886938179858">24小時免費諮詢</a>
+                    <a class="btn btn-primary display-4" href="https://line.me/ti/p/TuM5y_Of6I" target="_blank">24小時禮儀服務</a>
+                    <a class="btn btn-primary display-4" href="https://www.facebook.com/shianganlife/?locale=zh_TW" target="_blank">Facebook</a>
+                    <a class="btn btn-primary display-4" href="https://maps.app.goo.gl/fUVUDadRe36L3Dnn9?g_st=il" target="_blank">地圖</a>
+                    <a class="btn btn-primary display-4" href="page1.html#features028-25" target="_blank">訂購花籃</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript 代码 -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var backgroundVideo = document.getElementById('background-video');
+    var backgroundImage = document.getElementById('background-image');
+
+    // 懒加载视频
+    var observer = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting) {
+            backgroundVideo.querySelector('source').src = "https://24hour.xn--kpry57d/assets/videos/祥安生命禮儀公司 0938-179-858.mp4";
+            backgroundVideo.load();
+            observer.unobserve(backgroundVideo);
+        }
+    }, { threshold: 0.1 });
+    observer.observe(backgroundVideo);
+
+    // 监听视频加载完成
+    backgroundVideo.onloadeddata = function() {
+        // 如果视频无法播放，显示备用图像
+        if (backgroundVideo.videoWidth === 0 || backgroundVideo.videoHeight === 0) {
+            backgroundVideo.style.display = 'none';
+            backgroundImage.style.display = 'block';
+        }
+    };
+});
+</script>
+
     <h4 class="card-title mbr-fonts-style mbr-white mb-0 display-2">關於我們</h4>
     <p class="mbr-text mbr-fonts-style mt-3 mb-0 display-4">
         祥安生命有限公司，97年成立公司，至今已有多年的專業禮儀服務經驗，親力親為，陪伴家人，更是三重在地第一間，以現代化禮儀的方式呈現，為家人們擬場屬於至親的客製化禮儀包單，溫馨又不失古禮，用心陪伴逝者、陪伴家人，走完最後這一趟旅程。
