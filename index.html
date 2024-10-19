@@ -803,7 +803,9 @@
     <video autoplay muted loop playsinline id="background-video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
         <source src="https://24hour.xn--kpry57d/assets/videos/祥安生命禮儀公司 0938-179-858.mp4" type="video/mp4">
         <source src="https://24hour.xn--kpry57d/assets/videos/祥安生命禮儀公司 0938-179-858.webm" type="video/webm">
+        您的浏览器不支持视频播放。
     </video>
+
     <!-- 覆蓋的透明層 -->
     <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(166, 169, 156);"></div>
 
@@ -832,8 +834,8 @@
     </div>
 
     <!-- 照片 -->
-    <div class="photo-section" style="position: relative; z-index: 1;">
-        <img src="https://24hour.xn--kpry57d/影像.png" alt="影片頭" style="width: 100%; max-width: 800px; display: block; margin: 20px auto;">
+    <div class="photo-section" style="position: relative; z-index: 1; width: 100%; height: 100%;">
+        <img src="https://24hour.xn--kpry57d/影像.png" alt="首頁照片" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;">
     </div>
 </section>
 
@@ -843,7 +845,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var backgroundVideo = document.getElementById('background-video');
     var observer = new IntersectionObserver(function(entries) {
         if (entries[0].isIntersecting) {
-            backgroundVideo.querySelector('source').src = "https://24hour.xn--kpry57d/assets/videos/祥安生命禮儀公司%200938-179-858.mp4";
+            backgroundVideo.querySelector('source').src = "https://24hour.xn--kpry57d/assets/videos/祥安生命禮儀公司 0938-179-858.mp4";
             backgroundVideo.load();
             observer.unobserve(backgroundVideo);
         }
