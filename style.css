@@ -260,3 +260,22 @@ document.addEventListener("DOMContentLoaded", function() {
               <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
 </style>
 </head>
+
+<style>
+/* 清理未使用的 CSS */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+</style>
