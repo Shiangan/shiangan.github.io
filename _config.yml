@@ -1,0 +1,7 @@
+title: "祥安生命有限公司"
+description: "祥安生命有限公司，合法葬儀社，價格透明，傾聽您的訴求，台北葬儀社推薦，新北葬儀社推薦，禮儀公司"
+baseurl: "" # 留空或填写子路径
+url: "https://24hour.台灣" # 网站的完整 URL
+
+markdown: kramdown
+theme: Minimal Mistakes  # 您可以选择其他主题
