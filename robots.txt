@@ -5,4 +5,4 @@ Disallow: /private/       # 隐藏私人或不需要公开的文件夹
 Allow: /videos/           # 允许搜索引擎访问影片目录
 Allow: /sitemap.xml       # 允许访问站点地图
 
-Sitemap: https://www.24hour.台灣/sitemap.xml
+Sitemap: https://24hour.台灣/sitemap.xml
