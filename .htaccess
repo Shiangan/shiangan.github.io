@@ -22,3 +22,7 @@ Options +FollowSymLinks
     ExpiresByType image/x-icon "access plus 1 year"
     ExpiresDefault "access plus 2 days"
 </IfModule>
+
+<IfModule mod_headers.c>
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; object-src 'none';"
+</IfModule>
