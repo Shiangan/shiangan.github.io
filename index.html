@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://24hour.xn--kpry57d/important-file.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://24hour.xn--kpry57d/important-file.css"></noscript>
     <meta property="og:site_name" content="祥安生命有限公司"/>
+    <link rel="preload" href="assets/videos/祥安生命禮儀有限公司 0938-179-858.webm" as="video">
+    <link rel="preload" href="assets/videos/祥安生命禮儀有限公司 0938-179-858.mp4" as="video">
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="提供溫馨、尊嚴的服務，透明化價格，推薦合法禮儀公司，聆聽您的需求，告別式想要怎麼做，由您來決定，提供佛道教.日蓮正宗.創價學會.基督教.天主教等各類宗教儀式。">
@@ -687,90 +689,116 @@
     </nav>
 </section>
                                 
-<section class="header" id="header-video">
-    <video id="background-video" autoplay loop muted playsinline>
-        <source src="assets/videos/祥安生命禮儀有限公司 0938-179-858.webm" type="video/webm">
-        <source src="assets/videos/祥安生命禮儀有限公司 0938-179-858.mp4" type="video/mp4">
-        您的瀏覽器不支援嵌入影片標籤。
-    </video>
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="content-wrap">
-            <h1><strong>祥安生命</strong><br>聆聽您的訴求</h1>
-            <p>☘️每一段生命都是獨特的，每一場追思會也應該是獨一無二的<br>客製化服務，與家人攜手陪伴親人走完屬於人生的畢業典禮☘️</p>
+    <style>
+        /* 全局样式优化 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        #header-video {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(166, 169, 156, 0.7);
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-wrap {
+            color: white;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header" id="header-video">
+        <!-- 背景视频优化：使用 webm 格式并延迟加载 -->
+        <video id="background-video" autoplay loop muted playsinline>
+            <source src="assets/videos/yourvideo.webm" type="video/webm">
+            <source src="assets/videos/yourvideo.mp4" type="video/mp4">
+            您的瀏覽器不支援嵌入影片標籤。
+        </video>
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="content-wrap">
+                <h1><strong>祥安生命</strong><br>聆聽您的訴求</h1>
+                <p>☘️每一段生命都是獨特的，每一場追思會也應該是獨一無二的<br>客製化服務，與家人攜手陪伴親人走完屬於人生的畢業典禮☘️</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<style>
-    #header-video {
-        position: relative;
-        height: 100vh;
-        width: 100%;
-        overflow: hidden;
-    }
+    <script>
+        // 延迟加载视频以加速首屏加载
+        document.addEventListener("DOMContentLoaded", function() {
+            const video = document.getElementById('background-video');
+            video.src = "assets/videos/yourvideo.mp4";  // 延迟加载视频
+        });
 
-    #background-video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: -1;
-    }
-
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(166, 169, 156, 0.7);
-        z-index: 1;
-    }
-
-    .container {
-        position: relative;
-        z-index: 2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
-
-    .content-wrap {
-        color: white;
-        text-align: center;
-        max-width: 600px;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-        font-weight: bold;
-    }
-
-    p {
-        font-size: 1.2rem;
-        margin-top: 20px;
-    }
-</style>
-
-<script>
-    // 延迟加载视频以加速首屏加载
-    document.addEventListener("DOMContentLoaded", function() {
-        const video = document.getElementById('background-video');
-        video.src = "assets/videos/yourvideo.mp4";  // 在 DOM 加载后才加载视频
-    });
-
-    // 针对移动设备使用静态图片背景，减少带宽消耗
-    if (window.innerWidth <= 768) {
-        document.getElementById('background-video').style.display = 'none';
-        document.body.style.backgroundImage = 'url(assets/images/background.jpg)';
-    }
-</script>
-
+        // 针对移动设备使用静态图片背景，减少带宽消耗
+        if (window.innerWidth <= 768) {
+            document.getElementById('background-video').style.display = 'none';
+            document.body.style.backgroundImage = 'url(assets/images/background.jpg)';
+        }
+    </script>
+</body>
+</html>
 
 <section data-bs-version="5.1" class="article01 cid-ugMgCjGe5h mbr-parallax-background" id="about-us-1-ugMgCjGe5h">
     <div class="mbr-overlay" style="opacity: 0.8; background-color: rgba(255, 255, 255, 0.8);"></div>
