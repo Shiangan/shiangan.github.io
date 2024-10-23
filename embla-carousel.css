@@ -1,0 +1,67 @@
+/* Embla 轮播的基础样式 */
+.embla {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px; /* 限制最大宽度 */
+  margin: 0 auto; /* 使轮播居中 */
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__container {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.embla__slide {
+  position: relative;
+  min-width: 100%; /* 每个 slide 占满整个容器 */
+}
+
+.embla__slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 左右按钮样式 */
+.embla__prev, .embla__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.embla__prev {
+  left: 10px;
+}
+
+.embla__next {
+  right: 10px;
+}
+
+/* SVG 按钮箭头样式 */
+.embla__prev svg, .embla__next svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+@media (max-width: 768px) {
+  .embla__prev, .embla__next {
+    padding: 5px;
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
