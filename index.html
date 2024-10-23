@@ -1068,6 +1068,16 @@
                         </div>
                     </div>
                 </div>
+                                                <!-- 左右导航按钮 -->
+                            <button class="embla__prev" aria-hidden="true">
+                                <svg viewBox="0 0 100 100"><path d="M70 10 L30 50 L70 90"></path></svg>
+                            </button>
+                            <button class="embla__next" aria-hidden="true">
+                                <svg viewBox="0 0 100 100"><path d="M30 10 L70 50 L30 90"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -1078,10 +1088,16 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const emblaNode = document.querySelector('.embla');
-        const options = { loop: true, autoplay: true, autoplayInterval: 2000 };
+        const options = {
+            loop: true,
+            autoplay: true,
+            autoplayInterval: 2000,
+            draggable: true,
+        };
         const embla = EmblaCarousel(emblaNode, options);
     });
 </script>
+    
 
   <section data-bs-version="5.1" class="pricing1 cid-ugMgCjLXSk" id="pricing-cards-1-ugMgCjLXSk">
     <div class="mbr-overlay"></div>
