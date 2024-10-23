@@ -15,6 +15,8 @@
     <meta property="og:site_name" content="祥安生命有限公司"/>
     <link rel="preload" href="assets/videos/祥安生命禮儀有限公司 0938-179-858.webm" as="video">
     <link rel="preload" href="assets/videos/祥安生命禮儀有限公司 0938-179-858.mp4" as="video">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/embla-carousel/3.0.0/embla.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/embla-carousel/3.0.0/embla.min.js"></script>
         <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';                  /* 只允许同源的资源 */
         script-src 'self' 'nonce-随机字符串'; /* 只允许同源的脚本和带有 nonce 的脚本 */
@@ -837,10 +839,9 @@
                 <h3 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-4">
                     <em>回憶永存，與家人走過的點點滴滴</em>
                 </h3>
-
                 <div class="row">
                     <div class="col-12">
-                        <div class="embla position-relative" data-skip-snaps="true" data-align="center" data-contain-scroll="trimSnaps" data-loop="true" data-auto-play="true" data-auto-play-interval="2" data-draggable="true">
+                        <div class="embla position-relative" data-skip-snaps="true" data-align="center" data-contain-scroll="trimSnaps" data-loop="true" data-auto-play="true" data-auto-play-interval="2000" data-draggable="true">
                             <div class="embla__viewport">
                                 <div class="embla__container">
                                     <!-- Slide 1 -->
@@ -1060,21 +1061,10 @@
                                                 <div class="item-wrapper">
                                                     <img src="https://24hour.xn--kpry57d/path/to/2024-07-01-4.jpg" alt="紀錄22" loading="lazy">
                                                 </div>
-                                            </div>
+                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="embla__prev" aria-hidden="true">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                    <path d="M176.8,256l113.6-113.6c6.2-6.2,6.2-16.4,0-22.6l-22.6-22.6c-6.2-6.2-16.4-6.2-22.6,0L91.2,256c-6.2,6.2-6.2,16.4,0,22.6l113.6,113.6c6.2,6.2,16.4,6.2,22.6,0l22.6-22.6c-6.2-6.2-6.2-16.4-0.2-22.6L176.8,256z"/>
-                                </svg>
-                            </div>
-                            <div class="embla__next" aria-hidden="true">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                    <path d="M335.2,256l-113.6,113.6c-6.2,6.2-6.2,16.4,0,22.6l22.6,22.6c6.2,6.2,16.4,6.2,22.6,0L420.8,256c6.2-6.2,6.2-16.4,0-22.6l-113.6-113.6c-6.2-6.2-16.4-6.2-22.6,0l-22.6,22.6c6.2,6.2,6.2,16.4,0.2,22.6L335.2,256z"/>
-                                </svg>
-                            </div>
+                            <div class="embla__prev" aria-hidden="true"> <!-- Previous button SVG --> </div>
+                            <div class="embla__next" aria-hidden="true"> <!-- Next button SVG --> </div>
                         </div>
                     </div>
                 </div>
@@ -1082,6 +1072,16 @@
         </div>
     </div>
 </section>
+
+<!-- Include Embla Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/embla-carousel/3.0.0/embla.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const emblaNode = document.querySelector('.embla');
+        const options = { loop: true, autoplay: true, autoplayInterval: 2000 };
+        const embla = EmblaCarousel(emblaNode, options);
+    });
+</script>
 
   <section data-bs-version="5.1" class="pricing1 cid-ugMgCjLXSk" id="pricing-cards-1-ugMgCjLXSk">
     <div class="mbr-overlay"></div>
