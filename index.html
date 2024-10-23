@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/embla-carousel/3.0.0/embla.min.css">
-        <meta http-equiv="Content-Security-Policy" content="
+     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';                  /* 只允许同源的资源 */
         script-src 'self' 'nonce-随机字符串'; /* 只允许同源的脚本和带有 nonce 的脚本 */
         style-src 'self';                    /* 只允许同源的样式 */
@@ -22,7 +22,6 @@
     <link rel="preload" href="https://24hour.xn--kpry57d/path/to/hero-image.jpg" as="image">
     <link rel="stylesheet" href="https://24hour.xn--kpry57d/important-file.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://24hour.xn--kpry57d/important-file.css"></noscript>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; object-src 'none';">
     <meta property="og:site_name" content="祥安生命有限公司">
     <link rel="preload" href="assets/videos/祥安生命禮儀有限公司 0938-179-858.webm" as="video">
     <link rel="preload" href="assets/videos/祥安生命禮儀有限公司 0938-179-858.mp4" as="video">
@@ -42,7 +41,7 @@
     <meta property="og:url" content="https://24hour.台灣">
     <meta property="og:image" content="https://24hour.xn--kpry57d/path/to/logo.png">
     <meta property="og:locale" content="zh_TW">
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="推薦禮儀公司｜祥安生命有限公司｜價格實惠｜24H免費諮詢">
     <meta name="twitter:description" content="提供專業葬禮服務，客製化禮儀包單，佛道教等宗教儀式，值得信賴的禮儀公司。">
     <meta name="twitter:image" content="https://24hour.xn--kpry57d/path/to/logo.png">
@@ -50,10 +49,10 @@
     <title>推薦禮儀公司｜祥安生命有限公司｜價格實惠｜24H免費諮詢</title>
 
     <!-- Fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Kiwi+Maru:300,400,500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kiwi+Maru:300,400,500&display=swap">
-    </noscript>
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Kiwi+Maru:300,400,500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kiwi+Maru:300,400,500&display=swap">
+</noscript>
 
     <script src="https://cdn.jsdelivr.net/npm/embla-carousel@6.0.3/embla.carousel.min.js"></script>
 
@@ -81,7 +80,7 @@
     </noscript>
 
 
-  <style>
+<style>
     .navbar-fixed-top {
         top: auto;
     }
@@ -762,7 +761,8 @@
                                 </div>
                             </div>
                         </div>
-<!-- 导航按钮 -->
+
+     <!-- 导航按钮 -->
                             <div class="embla__buttons">
                                 <button class="embla__prev" aria-hidden="true">
                                     <svg viewBox="0 0 100 100"><path d="M70 10 L30 50 L70 90" fill="none" stroke="black" stroke-width="5"></path></svg>
@@ -779,8 +779,113 @@
     </div>
 </section>
 
+     <style>
+        /* 通用样式 */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/embla-carousel/3.0.0/embla.min.js"></script>
+        /* 幻灯片容器 */
+        .slider4 {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 幻灯片背景 */
+        .mbr-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        /* 标题和副标题 */
+        .content-head {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .mbr-section-title {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .mbr-section-subtitle {
+            font-size: 1.5em;
+            color: #777;
+        }
+
+        /* 幻灯片图片 */
+        .embla__viewport {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .embla__container {
+            display: flex;
+        }
+
+        .embla__slide {
+            position: relative;
+            min-width: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        /* 图片样式 */
+        .item-wrapper {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item-img img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px; /* 圆角边框 */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+        }
+
+        /* 导航按钮 */
+        .embla__prev, .embla__next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 10;
+        }
+
+        .embla__prev {
+            left: 10px;
+        }
+
+        .embla__next {
+            right: 10px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .mbr-section-title {
+                font-size: 2em;
+            }
+
+            .mbr-section-subtitle {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+
+
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const emblaNode = document.querySelector('.embla');
@@ -788,111 +893,6 @@
         const embla = EmblaCarousel(emblaNode, options);
     });
 </script>
-
-<style>
-    /* 通用样式 */
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f7f7f7;
-    }
-
-    /* 幻灯片容器 */
-    .slider4 {
-        position: relative;
-        overflow: hidden;
-    }
-
-    /* 幻灯片背景 */
-    .mbr-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
-
-    /* 标题和副标题 */
-    .content-head {
-        padding: 60px 20px;
-        text-align: center;
-    }
-
-    .mbr-section-title {
-        font-size: 2.5em;
-        color: #333;
-        margin-bottom: 10px;
-    }
-
-    .mbr-section-subtitle {
-        font-size: 1.5em;
-        color: #777;
-    }
-
-    /* 幻灯片图片 */
-    .embla__viewport {
-        overflow: hidden;
-        position: relative;
-    }
-
-    .embla__container {
-        display: flex;
-    }
-
-    .embla__slide {
-        position: relative;
-        min-width: 100%;
-        transition: transform 0.5s ease;
-    }
-
-    /* 图片样式 */
-    .item-wrapper {
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .item-img img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px; /* 圆角边框 */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
-    }
-
-    /* 导航按钮 */
-    .embla__prev, .embla__next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(255, 255, 255, 0.8);
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        padding: 10px;
-        z-index: 10;
-    }
-
-    .embla__prev {
-        left: 10px;
-    }
-
-    .embla__next {
-        right: 10px;
-    }
-
-    /* 响应式设计 */
-    @media (max-width: 768px) {
-        .mbr-section-title {
-            font-size: 2em;
-        }
-
-        .mbr-section-subtitle {
-            font-size: 1.2em;
-        }
-    }
-</style>
 </body>
 
     <body>
