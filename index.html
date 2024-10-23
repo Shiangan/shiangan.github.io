@@ -15,7 +15,7 @@
     <meta property="og:site_name" content="祥安生命有限公司"/>
     <link rel="preload" href="assets/videos/祥安生命禮儀有限公司 0938-179-858.webm" as="video">
     <link rel="preload" href="assets/videos/祥安生命禮儀有限公司 0938-179-858.mp4" as="video">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/embla-carousel/3.0.0/embla.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/embla-carousel/3.0.0/embla.min.css">
         <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';                  /* 只允许同源的资源 */
         script-src 'self' 'nonce-随机字符串'; /* 只允许同源的脚本和带有 nonce 的脚本 */
@@ -134,9 +134,14 @@
 
 
 .banner {
-    animation: 4s linear animationBanner; /* 添加动画 */
-    -webkit-animation: 4s linear animationBanner; /* 兼容 Safari 和旧版本浏览器 */
-}
+    @keyframes animationBanner {
+    0% {
+        transform: translateX(0); /* 从左侧起始位置 */
+    }
+    100% {
+        transform: translateX(100%); /* 向右移动到终点位置 */
+    }
+
 
     #mobiriseBanner .banner p {
         overflow: hidden;
