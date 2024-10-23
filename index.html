@@ -1060,35 +1060,20 @@
                                         <div class="slide-content">
                                             <div class="item-img">
                                                 <div class="item-wrapper">
-                                                    <img src="https://24hour.xn--kpry57d/path/to/2024-07-01-4.jpg" alt="紀錄22" loading="lazy"                                                </div>
+                                                    <img src="https://24hour.xn--kpry57d/path/to/2024-07-01-4.jpg" alt="紀錄22" loading="lazy">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="embla__prev" aria-hidden="true"> <!-- Previous button SVG --> </div>
-                            <div class="embla__next" aria-hidden="true"> <!-- Next button SVG --> </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-                                                <!-- 左右导航按钮 -->
-                            <button class="embla__prev" aria-hidden="true">
-                                <svg viewBox="0 0 100 100"><path d="M70 10 L30 50 L70 90"></path></svg>
-                            </button>
-                            <button class="embla__next" aria-hidden="true">
-                                <svg viewBox="0 0 100 100"><path d="M30 10 L70 50 L30 90"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+                     <!-- Navigation buttons -->
+<button class="embla__prev" aria-hidden="true">
+    <svg viewBox="0 0 100 100"><path d="M70 10 L30 50 L70 90"></path></svg>
+</button>
+<button class="embla__next" aria-hidden="true">
+    <svg viewBox="0 0 100 100"><path d="M30 10 L70 50 L30 90"></path></svg>
+</button>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/embla-carousel/3.0.0/embla.min.js"></script>
 <script>
@@ -1098,6 +1083,110 @@
         const embla = EmblaCarousel(emblaNode, options);
     });
 </script>
+        
+<style>/* 通用样式 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+/* 幻灯片容器 */
+.slider4 {
+    position: relative;
+    overflow: hidden;
+}
+
+/* 幻灯片背景 */
+.mbr-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* 标题和副标题 */
+.content-head {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.mbr-section-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.mbr-section-subtitle {
+    font-size: 1.5em;
+    color: #777;
+}
+
+/* 幻灯片图片 */
+.embla__viewport {
+    overflow: hidden;
+    position: relative;
+}
+
+.embla__container {
+    display: flex;
+}
+
+.embla__slide {
+    position: relative;
+    min-width: 100%;
+    transition: transform 0.5s ease;
+}
+
+/* 图片样式 */
+.item-wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* 圆角边框 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+
+/* 导航按钮 */
+.embla__prev, .embla__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+.embla__prev {
+    left: 10px;
+}
+
+.embla__next {
+    right: 10px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .mbr-section-title {
+        font-size: 2em;
+    }
+
+    .mbr-section-subtitle {
+        font-size: 1.2em;
+    }
+}
+</style>
     
 
   <section data-bs-version="5.1" class="pricing1 cid-ugMgCjLXSk" id="pricing-cards-1-ugMgCjLXSk">
