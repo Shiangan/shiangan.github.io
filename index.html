@@ -675,14 +675,14 @@
             overflow: hidden;
         }
 
-        #background-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* 确保视频尺寸合适，避免布局偏移 */
-            z-index: -1;
+    #background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* 让视频覆盖整个背景 */
+    z-index: -1;  /* 将视频放在所有内容下面 */
         }
 
         .overlay {
@@ -731,30 +731,34 @@
         }
     </style>
 
-    <script defer>
-        // JavaScript 异步加载，避免阻塞渲染
-        document.addEventListener("DOMContentLoaded", function() {
-            const video = document.getElementById('background-video');
-            video.src = "assets/videos/祥安生命禮儀有限公司 0938-179-858.mp4"; // 延迟加载视频
-        });
+<script defer>
+    // JavaScript 异步加载，避免阻塞渲染
+    document.addEventListener("DOMContentLoaded", function() {
+        const video = document.getElementById('background-video');
+        video.src = "assets/videos/祥安生命禮儀有限公司 0938-179-858.mp4"; // 延迟加载视频
+        video.preload = "metadata"; // 设置预加载为metadata
+        video.muted = true; // 静音
+        video.loop = true; // 循环播放
+        video.play(); // 播放视频
+    });
 
-        // 针对移动设备使用静态图片背景，减少带宽消耗
-        if (window.innerWidth <= 768) {
-            document.getElementById('background-video').style.display = 'none';
-            document.body.style.backgroundImage = 'url(assets/images/background.jpg)';
-        }
-    </script>
- </section>
+    // 不使用静态背景，始终显示视频
+    // if (window.innerWidth <= 768) {
+    //     document.getElementById('background-video').style.display = 'none';
+    //     document.body.style.backgroundImage = 'url(assets/images/background.jpg)';
+    // }
+</script>
 </body>
 
 <body>
     <section class="header" id="header-video">
         <!-- 使用更轻的视频格式和文件 -->
         <video id="background-video" autoplay loop muted playsinline>
-            <source src="assets/videos/yourvideo.webm" type="video/webm">
-            <source src="assets/videos/yourvideo.mp4" type="video/mp4">
+            <source src="assets/videos/祥安生命禮儀有限公司 0938-179-858.webm" type="video/webm">
+            <source src="assets/videos/祥安生命禮儀有限公司 0938-179-858.mp4" type="video/mp4">
             您的瀏覽器不支援嵌入影片標籤。
         </video>
+        
         <div class="overlay"></div>
         <div class="container">
             <div class="content-wrap">
