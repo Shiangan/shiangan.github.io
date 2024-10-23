@@ -3,6 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/embla-carousel/3.0.0/embla.min.css">
+        <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';                  /* 只允许同源的资源 */
+        script-src 'self' 'nonce-随机字符串'; /* 只允许同源的脚本和带有 nonce 的脚本 */
+        style-src 'self';                    /* 只允许同源的样式 */
+        img-src 'self' data:;               /* 只允许同源的图像及数据 URI */
+        object-src 'none';                   /* 不允许加载插件内容 */
+        base-uri 'self';                     /* 只允许同源的 base URI */
+        form-action 'self';                  /* 只允许同源的表单提交 */
+        frame-ancestors 'none';              /* 禁止嵌套到其他网站 */
+    ">
     <meta name="generator" content="祥安生命有限公司-合法葬儀社">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link rel="shortcut icon" href="https://24hour.xn--kpry57d/path/to/logo.png" type="image/x-icon">
@@ -16,16 +27,7 @@
     <link rel="preload" href="assets/videos/祥安生命禮儀有限公司 0938-179-858.webm" as="video">
     <link rel="preload" href="assets/videos/祥安生命禮儀有限公司 0938-179-858.mp4" as="video">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/embla-carousel/3.0.0/embla.min.css">
-        <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';                  /* 只允许同源的资源 */
-        script-src 'self' 'nonce-随机字符串'; /* 只允许同源的脚本和带有 nonce 的脚本 */
-        style-src 'self';                    /* 只允许同源的样式 */
-        img-src 'self' data:;               /* 只允许同源的图像及数据 URI */
-        object-src 'none';                   /* 不允许加载插件内容 */
-        base-uri 'self';                     /* 只允许同源的 base URI */
-        form-action 'self';                  /* 只允许同源的表单提交 */
-        frame-ancestors 'none';              /* 禁止嵌套到其他网站 */
-    ">
+      
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="提供溫馨、尊嚴的服務，透明化價格，推薦合法禮儀公司，聆聽您的需求，告別式想要怎麼做，由您來決定，提供佛道教.日蓮正宗.創價學會.基督教.天主教等各類宗教儀式。">
@@ -79,7 +81,7 @@
     </noscript>
 
 
-    <style>
+  <style>
     .navbar-fixed-top {
         top: auto;
     }
@@ -87,9 +89,6 @@
     #mobiriseBanner.container-banner {
         height: 8rem;
         opacity: 1;
-        -webkit-animation: 4s linear animationHeight;
-        -moz-animation: 4s linear animationHeight;
-        -o-animation: 4s linear animationHeight;
         animation: 4s linear animationHeight;
         transition: all 0.5s;
     }
@@ -98,9 +97,6 @@
         pointer-events: none;
         height: 0;
         opacity: 0;
-        -webkit-animation: 0.5s linear animationClosing;
-        -moz-animation: 0.5s linear animationClosing;
-        -o-animation: 0.5s linear animationClosing;
         animation: 0.5s linear animationClosing;
     }
 
@@ -113,8 +109,6 @@
         background: #fff;
         padding: 10px;
         opacity: 1;
-        -moz-animation: 4s linear animationBanner;
-        -o-animation: 4s linear animationBanner;
         animation: 4s linear animationBanner;
         z-index: 1031;
         display: flex;
@@ -122,26 +116,50 @@
         justify-content: center;
     }
 
-      #@keyframes animationBanner {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-
-.banner {
+    /* Global @keyframes definitions */
     @keyframes animationBanner {
-    0% {
-        transform: translateX(0); /* 从左侧起始位置 */
-    }
-    100% {
-        transform: translateX(100%); /* 向右移动到终点位置 */
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
+    @keyframes animationBannerMove {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(100%);
+        }
+    }
+
+    @keyframes animationHeight {
+        0% {
+            height: 0;
+        }
+        100% {
+            height: 8rem;
+        }
+    }
+
+    @keyframes animationClosing {
+        0% {
+            height: 8rem;
+            opacity: 1;
+        }
+        30% {
+            height: 8rem;
+            opacity: 0.5;
+        }
+        100% {
+            height: 0;
+            opacity: 0;
+        }
+    }
 
     #mobiriseBanner .banner p {
         overflow: hidden;
@@ -150,16 +168,15 @@
         -webkit-box-orient: vertical;
         animation: none;
         visibility: visible;
-     }
-        
-    #clamped-text {
-    display: -webkit-box;               /* 创建一个弹性盒子容器 */
-    -webkit-box-orient: vertical;      /* 设置盒子方向为垂直 */
-    -webkit-line-clamp: 4;              /* 限制显示行数为4行 */
-    overflow: hidden;                   /* 隐藏超出盒子部分的内容 */
-    text-overflow: ellipsis;           /* 使用省略号表示截断文本 */
-}
+    }
 
+    #clamped-text {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
     #mobiriseBanner .buy-license {
         text-decoration: underline;
@@ -175,198 +192,6 @@
         z-index: 1032;
     }
 
-    @-webkit-keyframes animationBanner {
-        0% {
-            opacity: 0;
-            top: -8rem;
-        }
-
-        75% {
-            opacity: 0;
-            top: -8rem;
-        }
-
-        100% {
-            opacity: 1;
-            top: 0;
-        }
-    }
-
-    @-moz-keyframes animationBanner {
-        0% {
-            opacity: 0;
-            top: -8rem;
-        }
-
-        75% {
-            opacity: 0;
-            top: -8rem;
-        }
-
-        100% {
-            opacity: 1;
-            top: 0;
-        }
-    }
-
-    @-o-keyframes animationBanner {
-        0% {
-            opacity: 0;
-            top: -8rem;
-        }
-
-        75% {
-            opacity: 0;
-            top: -8rem;
-        }
-
-        100% {
-            opacity: 1;
-            top: 0;
-        }
-    }
-
-    @keyframes animationBanner {
-        0% {
-            opacity: 0;
-            top: -8rem;
-        }
-
-        75% {
-            opacity: 0;
-            top: -8rem;
-        }
-
-        100% {
-            opacity: 1;
-            top: 0;
-        }
-    }
-
-    @-webkit-keyframes animationHeight {
-        0% {
-            height: 0;
-        }
-
-        75% {
-            height: 0;
-        }
-
-        100% {
-            height: 8rem;
-        }
-    }
-
-    @-moz-keyframes animationHeight {
-        0% {
-            height: 0;
-        }
-
-        75% {
-            height: 0;
-        }
-
-        100% {
-            height: 8rem;
-        }
-    }
-
-    @-o-keyframes animationHeight {
-        0% {
-            height: 0;
-        }
-
-        75% {
-            height: 0;
-        }
-
-        100% {
-            height: 8rem;
-        }
-    }
-
-    @keyframes animationHeight {
-        0% {
-            height: 0;
-        }
-
-        75% {
-            height: 0;
-        }
-
-        100% {
-            height: 8rem;
-        }
-    }
-
-    @-webkit-keyframes animationClosing {
-        0% {
-            height: 8rem;
-            opacity: 1;
-        }
-
-        30% {
-            height: 8rem;
-            opacity: 0.5;
-        }
-
-        100% {
-            height: 0;
-            opacity: 0;
-        }
-    }
-
-    @-moz-keyframes animationClosing {
-        0% {
-            height: 8rem;
-            opacity: 1;
-        }
-
-        30% {
-            height: 8rem;
-            opacity: 0.5;
-        }
-
-        100% {
-            height: 0;
-            opacity: 0;
-        }
-    }
-
-    @-o-keyframes animationClosing {
-        0% {
-            height: 8rem;
-            opacity: 1;
-        }
-
-        30% {
-            height: 8rem;
-            opacity: 0.5;
-        }
-
-        100% {
-            height: 0;
-            opacity: 0;
-        }
-    }
-
-    @keyframes animationClosing {
-        0% {
-            height: 8rem;
-            opacity: 1;
-        }
-
-        30% {
-            height: 8rem;
-            opacity: 0.5;
-        }
-
-        100% {
-            height: 0;
-            opacity: 0;
-        }
-    }
-
     @media (max-width: 767px) {
         #mobiriseBanner.container-banner {
             height: 12rem;
@@ -376,113 +201,14 @@
             min-height: 12rem;
         }
 
-        @-webkit-keyframes animationBanner {
-            0% {
-                opacity: 0;
-                top: -12rem;
-            }
-
-            75% {
-                opacity: 0;
-                top: -12rem;
-            }
-
-            100% {
-                opacity: 1;
-                top: 0;
-            }
-        }
-
-        @-moz-keyframes animationBanner {
-            0% {
-                opacity: 0;
-                top: -12rem;
-            }
-
-            75% {
-                opacity: 0;
-                top: -12rem;
-            }
-
-            100% {
-                opacity: 1;
-                top: 0;
-            }
-        }
-
-        @-o-keyframes animationBanner {
-            0% {
-                opacity: 0;
-                top: -12rem;
-            }
-
-            75% {
-                opacity: 0;
-                top: -12rem;
-            }
-
-            100% {
-                opacity: 1;
-                top: 0;
-            }
-        }
-
         @keyframes animationBanner {
             0% {
                 opacity: 0;
                 top: -12rem;
             }
-
-            75% {
-                opacity: 0;
-                top: -12rem;
-            }
-
             100% {
                 opacity: 1;
                 top: 0;
-            }
-        }
-
-        @-webkit-keyframes animationHeight {
-            0% {
-                height: 0;
-            }
-
-            75% {
-                height: 0;
-            }
-
-            100% {
-                height: 12rem;
-            }
-        }
-
-        @-moz-keyframes animationHeight {
-            0% {
-                height: 0;
-            }
-
-            75% {
-                height: 0;
-            }
-
-            100% {
-                height: 12rem;
-            }
-        }
-
-        @-o-keyframes animationHeight {
-            0% {
-                height: 0;
-            }
-
-            75% {
-                height: 0;
-            }
-
-            100% {
-                height: 12rem;
             }
         }
 
@@ -490,64 +216,8 @@
             0% {
                 height: 0;
             }
-
-            75% {
-                height: 0;
-            }
-
             100% {
                 height: 12rem;
-            }
-        }
-
-        @-webkit-keyframes animationClosing {
-            0% {
-                height: 12rem;
-                opacity: 1;
-            }
-
-            30% {
-                height: 12rem;
-                opacity: 0.5;
-            }
-
-            100% {
-                height: 0;
-                opacity: 0;
-            }
-        }
-
-        @-moz-keyframes animationClosing {
-            0% {
-                height: 12rem;
-                opacity: 1;
-            }
-
-            30% {
-                height: 12rem;
-                opacity: 0.5;
-            }
-
-            100% {
-                height: 0;
-                opacity: 0;
-            }
-        }
-
-        @-o-keyframes animationClosing {
-            0% {
-                height: 12rem;
-                opacity: 1;
-            }
-
-            30% {
-                height: 12rem;
-                opacity: 0.5;
-            }
-
-            100% {
-                height: 0;
-                opacity: 0;
             }
         }
 
@@ -556,12 +226,10 @@
                 height: 12rem;
                 opacity: 1;
             }
-
             30% {
                 height: 12rem;
                 opacity: 0.5;
             }
-
             100% {
                 height: 0;
                 opacity: 0;
@@ -569,7 +237,7 @@
         }
     }
 </style>
-
+ 
       <meta name="google-site-verification" content="DiamhXwKAQlYMXd-aGBMXAM8Mg-e7Pier6S69oh6tJk">
     
 </head>
