@@ -16,7 +16,6 @@
     <link rel="preload" href="assets/videos/祥安生命禮儀有限公司 0938-179-858.webm" as="video">
     <link rel="preload" href="assets/videos/祥安生命禮儀有限公司 0938-179-858.mp4" as="video">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/embla-carousel/3.0.0/embla.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/embla-carousel/3.0.0/embla.min.js"></script>
         <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';                  /* 只允许同源的资源 */
         script-src 'self' 'nonce-随机字符串'; /* 只允许同源的脚本和带有 nonce 的脚本 */
@@ -1061,15 +1060,21 @@
                                         <div class="slide-content">
                                             <div class="item-img">
                                                 <div class="item-wrapper">
-                                                    <img src="https://24hour.xn--kpry57d/path/to/2024-07-01-4.jpg" alt="紀錄22" loading="lazy">
-                                                </div>
-                                             </div>
+                                                    <img src="https://24hour.xn--kpry57d/path/to/2024-07-01-4.jpg" alt="紀錄22" loading="lazy"                                                </div>
+                                            </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="embla__prev" aria-hidden="true"> <!-- Previous button SVG --> </div>
                             <div class="embla__next" aria-hidden="true"> <!-- Next button SVG --> </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
                                                 <!-- 左右导航按钮 -->
                             <button class="embla__prev" aria-hidden="true">
                                 <svg viewBox="0 0 100 100"><path d="M70 10 L30 50 L70 90"></path></svg>
@@ -1085,17 +1090,11 @@
     </div>
 </section>
 
-<!-- Include Embla Carousel JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/embla-carousel/3.0.0/embla.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const emblaNode = document.querySelector('.embla');
-        const options = {
-            loop: true,
-            autoplay: true,
-            autoplayInterval: 2000,
-            draggable: true,
-        };
+        const options = { loop: true, autoplay: true, autoplayInterval: 2000 };
         const embla = EmblaCarousel(emblaNode, options);
     });
 </script>
