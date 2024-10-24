@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/embla-carousel/3.0.0/embla.min.css">
-     <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';                  /* 只允许同源的资源 */
-        script-src 'self' 'nonce-随机字符串'; /* 只允许同源的脚本和带有 nonce 的脚本 */
-        style-src 'self';                    /* 只允许同源的样式 */
-        img-src 'self' data:;               /* 只允许同源的图像及数据 URI */
-        object-src 'none';                   /* 不允许加载插件内容 */
-        base-uri 'self';                     /* 只允许同源的 base URI */
-        form-action 'self';                  /* 只允许同源的表单提交 */
-        frame-ancestors 'none';              /* 禁止嵌套到其他网站 */
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self'; 
+    script-src 'self' 'nonce-随机字符串' https://cdnjs.cloudflare.com https://ajax.googleapis.com; 
+    style-src 'self' https://cdnjs.cloudflare.com; 
+    img-src 'self' data:;  /* 若您不使用外部图像，可以去掉外部源 */
+    object-src 'none'; 
+    base-uri 'self'; 
+    form-action 'self'; 
+    font-src 'self' https://fonts.gstatic.com; 
+    frame-ancestors 'none'; 
+    connect-src 'self';  /* 除非需要访问特定 API，否则只允许同源 */
+    media-src 'self'; /* 根据需要添加外部媒体源 */
     ">
     <meta name="generator" content="祥安生命有限公司-合法葬儀社">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
