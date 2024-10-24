@@ -11,27 +11,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.0'  # Specify the Ruby version your Jekyll site uses
-        bundler-cache: true    # Enable caching for Bundler
-
-    - name: Install dependencies
-      run: |
-        gem install bundler
-        bundle install
+        ruby-version: '3.0'  # 或者你安装的其他版本
+        bundler-cache: true
 
     - name: Build the site
       run: |
-        bundle exec jekyll build --future
-
-    - name: Deploy to GitHub Pages
-      if: github.ref == 'refs/heads/main'  # Only deploy on push to main
-      run: |
-        # Example for deploying to GitHub Pages
-        echo "Deploying to GitHub Pages..."
-        # Add your deployment commands here, e.g., pushing to the gh-pages branch
+        bundle install
+        bundle exec jekyll build
