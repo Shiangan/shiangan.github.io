@@ -1,15 +1,24 @@
-module Breadcrumbs
-  def breadcrumbs
-    path = []
-    current_page = page
+module Jekyll
+  class BreadcrumbsGenerator < Generator
+    safe true
 
-    while current_page
-      path << { title: current_page.data['title'], url: current_page.url }
-      current_page = current_page.parent
+    def generate(site)
+      site.pages.each do |page|
+        # 如果页面没有定义面包屑，则使用默认值
+        if !page.data['breadcrumbs']
+          page.data['breadcrumbs'] = [
+            { 'title' => 'Home', 'url' => '/' },
+            { 'title' => page.data['title'], 'url' => page.url }
+          ]
+        else
+          page.data['breadcrumbs'] = page.data['breadcrumbs'].map do |crumb|
+            {
+              title: crumb['title'],
+              url: crumb['url']
+            }
+          end
+        end
+      end
     end
-
-    path.reverse
   end
 end
-
-Liquid::Template.register_filter(Breadcrumbs)
