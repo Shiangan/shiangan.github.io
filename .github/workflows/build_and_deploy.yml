@@ -15,7 +15,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7.x
+          ruby-version: 3.0.0  # 或使用具体版本或 latest
 
       - name: Install dependencies
         run: |
