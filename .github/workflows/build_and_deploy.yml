@@ -22,6 +22,9 @@ jobs:
           gem install bundler
           bundle install
 
+      - name: Clean up previous build
+        run: rm -rf _site
+
       - name: Build site
         run: bundle exec jekyll build
 
