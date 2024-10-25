@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "jekyll", "~> 4.0" # 确保使用支持的 Jekyll 版本
-gem "bundler"
+gem 'jekyll', '~> 4.2.0'  # 根据需要选择版本
+gem 'github-pages'          # 如果使用 GitHub Pages
