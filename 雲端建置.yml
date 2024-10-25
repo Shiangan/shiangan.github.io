@@ -1,20 +1,18 @@
-steps:
-  - id: 'install'
-    args: ['npm', 'ci']
-    name: node:16-alpine
-
-  - id: 'build'
-    waitFor: ['install']
-    name: node:16-alpine
-    args: ['npm', 'run', 'build']
-
-  - id: 'lighthouse'
-    waitFor: ['build']
-    name: cypress/browsers:node16.17.0-chrome106
-    entrypoint: '/bin/sh'
-    args: ['-c', 'npm install -g @lhci/cli@0.14.x && lhci autorun --failOnUploadFailure']
-    env:
-      - 'LHCI_BUILD_CONTEXT__CURRENT_BRANCH=$BRANCH_NAME'
-
-options:
-  machineType: 'N1_HIGHCPU_8'
+            - 名稱：下載建置工件
+  使用：actions/download-artifact@v4.1.8
+  和：
+    # 要下載的工件的名稱。如果未指定，則下載執行的所有工件。
+    名稱：# 可選
+    # 目標路徑。支援基本波浪線擴展。預設為 $GITHUB_WORKSPACE
+    路徑: # 可選
+    # 與應下載的工件相符的全域模式。如果指定了名稱，則忽略。
+    模式：# 可選
+    # 當多個工件符合時，這會變更目標目錄的行為。如果為 true，下載的工件將位於路徑指定的相同目錄中。如果為 false，則下載的工件將被提取到指定路徑內的單獨命名目錄中。
+    merge-multiple: # 可選，預設為 false
+    # 用於透過 GitHub API 進行身份驗證的 GitHub 令牌。從不同的儲存庫或不同的工作流程執行下載工件時，這是必需的。如果未指定，該操作將嘗試從目前儲存庫和目前工作流程執行下載工件。
+    github-token: # 可選
+    # 儲存庫擁有者和儲存庫名稱透過「/」連接在一起。如果指定了 github-token，則這是將從中下載工件的儲存庫。
+    repository: # 可選，預設為 ${{ github.repository }}
+    # 上傳所需下載工件的工作流程所執行的 ID。如果指定了 github-token，則這是將從中下載工件的運行。
+    run-id: # 可選，預設為 ${{ github.run_id }}
+          
