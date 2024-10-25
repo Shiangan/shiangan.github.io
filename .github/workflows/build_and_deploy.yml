@@ -15,7 +15,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.0.0  # 或使用具体版本或 latest
+          ruby-version: 3.0.0  # 使用具体的 Ruby 版本
 
       - name: Install dependencies
         run: |
@@ -23,7 +23,7 @@ jobs:
           bundle install
 
       - name: Clean up previous build
-        run: rm -rf _site
+        run: rm -rf _site  # 清理上一次的构建目录
 
       - name: Build site
         run: bundle exec jekyll build
