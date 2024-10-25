@@ -1,7 +1,4 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-# Specify the Jekyll version
-gem 'jekyll', '~> 4.2.0'
-
-# Optional: If you're using GitHub Pages
-gem 'github-pages', group: :jekyll_plugins
+gem "jekyll", "~> 4.3"
+gem "bundler", "~> 2.0"
