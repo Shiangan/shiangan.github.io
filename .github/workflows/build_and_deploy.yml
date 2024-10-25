@@ -15,7 +15,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.0  # 更新为合适的版本
+          ruby-version: '3.1' # 使用合适的 Ruby 版本
 
       - name: Install dependencies
         run: |
@@ -29,4 +29,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site  # 不需要更改
+          publish_dir: ./_site
