@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '~> 4.2.0'  # 根据需要选择版本
-gem 'github-pages'          # 如果使用 GitHub Pages
+# Specify the Jekyll version
+gem 'jekyll', '~> 4.2.0'
+
+# Optional: If you're using GitHub Pages
+gem 'github-pages', group: :jekyll_plugins
