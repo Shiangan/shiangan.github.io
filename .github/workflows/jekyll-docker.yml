@@ -14,8 +14,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name "陳妍如"
-          git config --global user.email "ava85110@yahoo.com.tw"
+          git config --global user. "陳妍如"
+          git config --global user. "ava85110@yahoo.com.tw"
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
