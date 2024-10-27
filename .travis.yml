@@ -1,9 +1,0 @@
-language: node_js
-node_js: v16
-addons:
-  chrome: stable
-before_install:
-  - npm install -g @lhci/cli@0.14.x
-script:
-  - npm run build
-  - lhci autorun
