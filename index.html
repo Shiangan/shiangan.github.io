@@ -887,7 +887,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // 懒加载视频
     var observer = new IntersectionObserver(function(entries) {
         if (entries[0].isIntersecting) {
-            backgroundVideo.querySelector('source').src = "https://24hour.xn--kpry57d/assets/videos/祥安生命禮儀公司 0938-179-858.mp4";
+            backgroundVideo.querySelector('source').src = "https://24hour.xn--kpry57d/path/to/祥安生命禮儀公司 0938-179-858 - Compressed with FlexClip";
             backgroundVideo.load();
             observer.unobserve(backgroundVideo);
         }
