@@ -1,7 +1,7 @@
-# name: OpenShift
+# GitHub Actions workflow for deploying to OpenShift with Fortify security scan
+name: OpenShift CI/CD with Fortify Security Scan
 
 env:
-  # 設定必要的 OpenShift 環境變數
   OPENSHIFT_SERVER: ${{ secrets.OPENSHIFT_SERVER }}
   OPENSHIFT_TOKEN: ${{ secrets.OPENSHIFT_TOKEN }}
   OPENSHIFT_NAMESPACE: ""
@@ -13,21 +13,16 @@ env:
   IMAGE_TAGS: ""
 
 on:
-  workflow_dispatch:
   push:
     branches: [ "main" ]
 
 jobs:
-  openshift-ci-cd:
-    name: Build and deploy to OpenShift
+  build-and-deploy:
+    name: Build, Scan, and Deploy to OpenShift
     runs-on: ubuntu-20.04
-    environment: production
-
-    outputs:
-      ROUTE: ${{ steps.deploy-and-expose.outputs.route }}
-      SELECTOR: ${{ steps.deploy-and-expose.outputs.selector }}
 
     steps:
+    # Check required secrets
     - name: Check for required secrets
       uses: actions/github-script@v6
       with:
@@ -36,48 +31,32 @@ jobs:
             OPENSHIFT_SERVER: `${{ secrets.OPENSHIFT_SERVER }}`,
             OPENSHIFT_TOKEN: `${{ secrets.OPENSHIFT_TOKEN }}`
           };
-          const GHCR = "ghcr.io";
-          if (!`${{ env.IMAGE_REGISTRY }}`.startsWith(GHCR)) {
-            secrets["IMAGE_REGISTRY_PASSWORD"] = `${{ secrets.IMAGE_REGISTRY_PASSWORD }}`;
-          }
-          const missingSecrets = Object.entries(secrets).filter(([name, value]) => {
-            if (!value) {
-              core.error(`❌ Secret "${name}" is not set`);
-              return true;
-            }
-            core.info(`✔️ Secret "${name}" is set`);
-            return false;
-          });
+          const missingSecrets = Object.entries(secrets).filter(([name, value]) => !value);
           if (missingSecrets.length > 0) {
-            core.setFailed(`❌ 缺少以下必要機密：${missingSecrets.map(([name]) => name).join(", ")}。\n` +
-              "可透過 GitHub 網頁介面或 CLI 設置機密，詳情請參閱：https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository");
-          } else {
-            core.info("✅ 所有必要的機密已正確設置");
+            core.setFailed(`Missing required secrets: ${missingSecrets.map(([name]) => name).join(", ")}`);
           }
 
+    # Checkout repository
     - name: Check out repository
       uses: actions/checkout@v4
 
-    - name: Determine app name
-      if: env.APP_NAME == ''
+    # Determine application name and image tags
+    - name: Set app name and image tags
       run: |
-        echo "APP_NAME=$(basename $PWD)" | tee -a $GITHUB_ENV
+        echo "APP_NAME=${{ env.APP_NAME || github.repository }}" >> $GITHUB_ENV
+        echo "IMAGE_TAGS=latest ${GITHUB_SHA::12}" >> $GITHUB_ENV
 
-    - name: Determine image tags
-      if: env.IMAGE_TAGS == ''
-      run: |
-        echo "IMAGE_TAGS=latest ${GITHUB_SHA::12}" | tee -a $GITHUB_ENV
-
-    - name: Build from Dockerfile
+    # Build Docker image
+    - name: Build Docker image
       id: build-image
       uses: redhat-actions/buildah-build@v2
       with:
         image: ${{ env.APP_NAME }}
         tags: ${{ env.IMAGE_TAGS }}
-        dockerfiles: |
-          ./Dockerfile
+        dockerfiles: ./Dockerfile
 
-    - name: Push to registry
+    # Push image to registry
+    - name: Push Docker image to registry
       id: push-image
       uses: redhat-actions/push-to-registry@v2
       with:
@@ -87,12 +66,20 @@ jobs:
         username: ${{ env.IMAGE_REGISTRY_USER }}
         password: ${{ env.IMAGE_REGISTRY_PASSWORD }}
 
-    - name: Install oc
+    # Fortify security scan
+    - name: Fortify Security Scan
+      uses: fortify/github-action/setup@v1.2.2
+      with:
+        FOD_RELEASE: Shiangan/shiangan.github.io:main
+
+    # Install OpenShift CLI (oc)
+    - name: Install OpenShift CLI
       uses: redhat-actions/openshift-tools-installer@v1
       with:
         oc: 4
 
-    - name: Log in to OpenShift
+    # Login to OpenShift
+    - name: Login to OpenShift
       uses: redhat-actions/oc-login@v1
       with:
         openshift_server_url: ${{ env.OPENSHIFT_SERVER }}
@@ -100,7 +87,8 @@ jobs:
         insecure_skip_tls_verify: true
         namespace: ${{ env.OPENSHIFT_NAMESPACE }}
 
-    - name: Create and expose app
+    # Deploy and expose the application
+    - name: Deploy and expose app
       id: deploy-and-expose
       uses: redhat-actions/oc-new-app@v1
       with:
@@ -109,16 +97,11 @@ jobs:
         namespace: ${{ env.OPENSHIFT_NAMESPACE }}
         port: ${{ env.APP_PORT }}
 
+    # Output the application route
     - name: Print application URL
-      env:
-        ROUTE: ${{ steps.deploy-and-expose.outputs.route }}
-        SELECTOR: ${{ steps.deploy-and-expose.outputs.selector }}
       run: |
-        if [[ -z "${{ env.ROUTE }}" ]]; then
-          echo "⚠️ Application route determination failed in the previous step."
+        if [[ -z "${{ steps.deploy-and-expose.outputs.route }}" ]]; then
+          echo "⚠️ Application route determination failed."
           exit 1
         fi
-        echo -e "\n======================== Your application is available at: ========================"
-        echo ${{ env.ROUTE }}
-        echo "==================================================================================="
-        echo -e "\nYour app can be taken down with: \"oc delete all --selector='${{ env.SELECTOR }}'\""
+        echo "Your application is available at: ${{ steps.deploy-and-expose.outputs.route }}"
