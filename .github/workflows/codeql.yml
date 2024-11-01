@@ -1,49 +1,21 @@
-    # CodeQL 支援「語言」的以下值關鍵字：「c-cpp」、「csharp」、「go」、「java-kotlin」、「javascript-typescript」、「python」、「ruby」、「swift」
-        #使用 `c-cpp` 分析用 C、C++ 或兩者寫的程式碼
-        #使用 'java-kotlin' 分析用 Java、Kotlin 或兩者編寫的程式碼
-        #使用 'javascript-typescript' 分析用 JavaScript、TypeScript 或兩者編寫的程式碼
-        #要了解有關更改分析的語言或自定義分析的構建模式的更多信息，
-        #請參閱https://docs.github.com/en/code-security/code-scanning/creating-an-advanced-setup-for-code-scanning/customizing-your-advanced-setup-for-code-scanning 。
-        #如果您正在分析編譯語言，您可以修改該語言的「建置模式」以自訂分析方式
-        #您的程式碼庫已被分析，請參閱https://docs.github.com/en/code-security/code-scanning/creating-an-advanced-setup-for-code-scanning/codeql-code-scanning -for-compiled - 語言
+ 
+名稱：Jekyll 網站 CI
+
+在：
+  推：
+    分支：[“主要”]
+  拉請求：
+    分支：[“主要”]
+
+職位：
+  建造：
+
+    運行：ubuntu-latest
+
     步驟：
-    -名稱：簽出儲存庫
-      使用：actions/checkout@v4
-
-    #初始化用於掃描的 CodeQL 工具。
-    -名稱：初始化 CodeQL
-      使用：github/codeql-action/init@v3
-      和：
-        語言：${{矩陣.語言}}
-        建置模式：${{matrix.build-mode}}
-        #如果您希望指定自訂查詢，可以在此處或在設定檔中執行此操作。
-        #預設情況下，此處列出的查詢將覆蓋在設定檔中指定的任何查詢。
-        #在此處的清單前面加上「+」前綴以使用這些查詢和設定檔中的查詢。
-
-        #有關CodeQL 查詢包的更多詳細信息，請參閱：https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerability-and-errors/ configuring-程式碼掃描#using-queries-in-ql-packs
-        #查詢：安全擴展、安全和質量
-
-    #如果您正在分析的語言之一的分析步驟失敗
-    # “我們無法自動建立您的程式碼”，修改上面的矩陣
-    #將該語言的建置模式設定為「手動」。然後修改這一步
-    #建立您的程式碼。
-    # ℹ️ 使用作業系統 shell 執行的命令列程式。
-    # 📚 請參閱 https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun
-    -如果：matrix.build-mode == '手動'
-      外殼：bash
+    -使用：actions/checkout@v4
+    - name：在 jekyll/builder 容器中建立站點
       運行：|
-        echo '如果您對其中一個或多個使用「手動」建置模式' \
-          '您正在分析的語言，將其替換為要建立的命令' \
-          '您的程式碼，例如：'
-        echo '使引導程式'
-        echo '發布'
-        1號出口
-    - name :執行 CodeQL 分析
-      使用：github/codeql-action/analyze@v3
-      和：
-        分類：“ /語言：${{matrix.language}} ”
-
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v3
-      with:
-        category: "/language:${{matrix.language}}"
+        碼頭工人運行\
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
