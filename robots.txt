@@ -2,9 +2,7 @@ User-agent: *
 Disallow: /admin/         # 禁止搜索引擎访问后台管理页面
 Disallow: /login/         # 禁止访问登录页面
 Disallow: /private/       # 隐藏私人或不需要公开的文件夹
-
 Allow: /                  # 允许访问网站的所有公开页面
 Allow: /videos/           # 允许搜索引擎访问影片目录
 Allow: /sitemap.xml       # 允许访问站点地图
-
 Sitemap: https://24hour.台灣/sitemap.xml
