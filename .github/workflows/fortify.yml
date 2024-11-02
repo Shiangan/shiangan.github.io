@@ -19,19 +19,21 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11'
+          distribution: 'temurin'  # 添加這一行，指定 Java 發行版
 
       - name: Install Fortify CLI
         run: |
           curl -L -o fortify.zip "https://github.com/fortify/cli/releases/download/v2.3.0/fortify-cli-linux.zip"
           unzip fortify.zip -d /home/runner/fortify-cli
-          export PATH=$PATH:/home/runner/fortify-cli
+        env:
+          PATH: ${{ runner.env.PATH }}:/home/runner/fortify-cli
 
       - name: Fortify SAST Scan
         env:
           FORTIFY_API_TOKEN: ${{ secrets.FORTIFY_API_TOKEN }}
           FORTIFY_URL: ${{ secrets.FORTIFY_URL }}
         run: |
-          fortify scan start --project "shiangan.github.io" --token $FORTIFY_API_TOKEN --url $FORTIFY_URL
+          fortify scan start --project "shiangan.github.io" --token $FORTIFY_API_TOKEN --url $http://shiangan.github.io
 
       - name: Check Fortify Scan Status
         env:
