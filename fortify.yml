@@ -1,0 +1,41 @@
+name: Fortify AST Scan
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  fortify-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+
+      - name: Install Fortify CLI
+        run: |
+          curl -L -o fortify.zip "https://github.com/fortify/cli/releases/download/v2.3.0/fortify-cli-linux.zip"
+          unzip fortify.zip -d /home/runner/fortify-cli
+          export PATH=$PATH:/home/runner/fortify-cli
+
+      - name: Fortify SAST Scan
+        env:
+          FORTIFY_API_TOKEN: ${{ secrets.FORTIFY_API_TOKEN }}
+          FORTIFY_URL: ${{ secrets.FORTIFY_URL }}
+        run: |
+          fortify scan start --project "shiangan.github.io" --token $FORTIFY_API_TOKEN --url $FORTIFY_URL
+
+      - name: Check Fortify Scan Status
+        env:
+          FORTIFY_API_TOKEN: ${{ secrets.FORTIFY_API_TOKEN }}
+          FORTIFY_URL: ${{ secrets.FORTIFY_URL }}
+        run: |
+          fortify scan wait --project "shiangan.github.io"
