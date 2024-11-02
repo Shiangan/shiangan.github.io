@@ -23,6 +23,7 @@ jobs:
 
       - name: Install Fortify CLI
         run: |
+          set -x  # 開啟詳細輸出
           curl -L -o fortify.zip "https://github.com/fortify/cli/releases/download/v2.3.0/fortify-cli-linux.zip"
           unzip fortify.zip -d /home/runner/fortify-cli
           echo "/home/runner/fortify-cli" >> $GITHUB_PATH  # 添加 CLI 到 PATH 環境變數
@@ -30,6 +31,7 @@ jobs:
 
       - name: Check Fortify CLI installation
         run: |
+          set -x  # 開啟詳細輸出
           fortify --version  # 確認 Fortify CLI 是否可用
 
       - name: Fortify SAST Scan
@@ -37,6 +39,7 @@ jobs:
           FORTIFY_API_TOKEN: ${{ secrets.FORTIFY_API_TOKEN }}
           FORTIFY_URL: ${{ secrets.FORTIFY_URL }}
         run: |
+          set -x  # 開啟詳細輸出
           fortify scan start --project "shiangan.github.io" --token $FORTIFY_API_TOKEN --url $http://shiangan.github.io
 
       - name: Check Fortify Scan Status
@@ -44,4 +47,5 @@ jobs:
           FORTIFY_API_TOKEN: ${{ secrets.FORTIFY_API_TOKEN }}
           FORTIFY_URL: ${{ secrets.FORTIFY_URL }}
         run: |
+          set -x  # 開啟詳細輸出
           fortify scan wait --project "shiangan.github.io"
