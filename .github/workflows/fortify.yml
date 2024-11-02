@@ -25,8 +25,9 @@ jobs:
         run: |
           set -x  # 開啟詳細輸出
           curl -L -o fortify.zip "https://github.com/fortify/cli/releases/download/v2.3.0/fortify-cli-linux.zip"
+          ls -l fortify.zip  # 列出 zip 文件信息以確認下載成功
           unzip fortify.zip -d /home/runner/fortify-cli
-          echo "/home/runner/fortify-cli" >> $GITHUB_PATH  # 添加 CLI 到 PATH 環境變數
+          echo "/home/runner/fortify-cli" >> $GITHUB_PATH  # 將 CLI 添加到 PATH 環境變數
           ls /home/runner/fortify-cli  # 列出安裝目錄中的文件
 
       - name: Check Fortify CLI installation
