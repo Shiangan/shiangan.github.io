@@ -19,14 +19,17 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11'
-          distribution: 'temurin'  # 添加這一行，指定 Java 發行版
+          distribution: 'temurin'
 
       - name: Install Fortify CLI
         run: |
           curl -L -o fortify.zip "https://github.com/fortify/cli/releases/download/v2.3.0/fortify-cli-linux.zip"
           unzip fortify.zip -d /home/runner/fortify-cli
-        env:
-          PATH: ${{ runner.env.PATH }}:/home/runner/fortify-cli
+          echo "/home/runner/fortify-cli" >> $GITHUB_PATH  # 添加 CLI 到 PATH 環境變數
+
+      - name: Check Fortify CLI installation
+        run: |
+          fortify --version  # 確認 Fortify CLI 是否可用
 
       - name: Fortify SAST Scan
         env:
