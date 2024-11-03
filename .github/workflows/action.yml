@@ -3,8 +3,8 @@ steps:
     uses: redhat-actions/oc-login@v1
     env:
       # These can be stored in secrets, if desired.
-      OPENSHIFT_USER: my-username
-      OPENSHIFT_NAMESPACE: my-namespace
+      OPENSHIFT_USER: shiangan
+      OPENSHIFT_NAMESPACE: shiangan.github.io
 
     with:
       # URL to your OpenShift cluster.
