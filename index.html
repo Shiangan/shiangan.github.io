@@ -123,480 +123,12 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla:200,300,400,500,600,700,800,200i,300i,400i,500i,600i,700i,800i&display=swap">
     </noscript>
 
-    <style>
-    .navbar-fixed-top {
-        top: auto;
-    }
-
-    #mobiriseBanner.container-banner {
-        height: 8rem;
-        opacity: 1;
-        -webkit-animation: 4s linear animationHeight;
-        -moz-animation: 4s linear animationHeight;
-        -o-animation: 4s linear animationHeight;
-        animation: 4s linear animationHeight;
-        transition: all 0.5s;
-    }
-
-    #mobiriseBanner.container-banner.container-banner-closing {
-        pointer-events: none;
-        height: 0;
-        opacity: 0;
-        -webkit-animation: 0.5s linear animationClosing;
-        -moz-animation: 0.5s linear animationClosing;
-        -o-animation: 0.5s linear animationClosing;
-        animation: 0.5s linear animationClosing;
-    }
-
-    #mobiriseBanner .banner {
-        min-height: 8rem;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: #fff;
-        padding: 10px;
-        opacity: 1;
-        -webkit-animation: 4s linear animationBanner;
-        -moz-animation: 4s linear animationBanner;
-        -o-animation: 4s linear animationBanner;
-        animation: 4s linear animationBanner;
-        z-index: 1031;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    #mobiriseBanner .banner p {
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        animation: none;
-        visibility: visible;
-    }
-
-    #mobiriseBanner .buy-license {
-        text-decoration: underline;
-    }
-
-    #mobiriseBanner .banner .btn {
-        margin: 0.3rem 0.5rem;
-        animation: none;
-        visibility: visible;
-    }
-
-    .navbar.opened {
-        z-index: 1032;
-    }
-
-    @-webkit-keyframes animationBanner {
-        0% {
-            opacity: 0;
-            top: -8rem;
-        }
-
-        75% {
-            opacity: 0;
-            top: -8rem;
-        }
-
-        100% {
-            opacity: 1;
-            top: 0;
-        }
-    }
-
-    @-moz-keyframes animationBanner {
-        0% {
-            opacity: 0;
-            top: -8rem;
-        }
-
-        75% {
-            opacity: 0;
-            top: -8rem;
-        }
-
-        100% {
-            opacity: 1;
-            top: 0;
-        }
-    }
-
-    @-o-keyframes animationBanner {
-        0% {
-            opacity: 0;
-            top: -8rem;
-        }
-
-        75% {
-            opacity: 0;
-            top: -8rem;
-        }
-
-        100% {
-            opacity: 1;
-            top: 0;
-        }
-    }
-
-    @keyframes animationBanner {
-        0% {
-            opacity: 0;
-            top: -8rem;
-        }
-
-        75% {
-            opacity: 0;
-            top: -8rem;
-        }
-
-        100% {
-            opacity: 1;
-            top: 0;
-        }
-    }
-
-    @-webkit-keyframes animationHeight {
-        0% {
-            height: 0;
-        }
-
-        75% {
-            height: 0;
-        }
-
-        100% {
-            height: 8rem;
-        }
-    }
-
-    @-moz-keyframes animationHeight {
-        0% {
-            height: 0;
-        }
-
-        75% {
-            height: 0;
-        }
-
-        100% {
-            height: 8rem;
-        }
-    }
-
-    @-o-keyframes animationHeight {
-        0% {
-            height: 0;
-        }
-
-        75% {
-            height: 0;
-        }
-
-        100% {
-            height: 8rem;
-        }
-    }
-
-    @keyframes animationHeight {
-        0% {
-            height: 0;
-        }
-
-        75% {
-            height: 0;
-        }
-
-        100% {
-            height: 8rem;
-        }
-    }
-
-    @-webkit-keyframes animationClosing {
-        0% {
-            height: 8rem;
-            opacity: 1;
-        }
-
-        30% {
-            height: 8rem;
-            opacity: 0.5;
-        }
-
-        100% {
-            height: 0;
-            opacity: 0;
-        }
-    }
-
-    @-moz-keyframes animationClosing {
-        0% {
-            height: 8rem;
-            opacity: 1;
-        }
-
-        30% {
-            height: 8rem;
-            opacity: 0.5;
-        }
-
-        100% {
-            height: 0;
-            opacity: 0;
-        }
-    }
-
-    @-o-keyframes animationClosing {
-        0% {
-            height: 8rem;
-            opacity: 1;
-        }
-
-        30% {
-            height: 8rem;
-            opacity: 0.5;
-        }
-
-        100% {
-            height: 0;
-            opacity: 0;
-        }
-    }
-
-    @keyframes animationClosing {
-        0% {
-            height: 8rem;
-            opacity: 1;
-        }
-
-        30% {
-            height: 8rem;
-            opacity: 0.5;
-        }
-
-        100% {
-            height: 0;
-            opacity: 0;
-        }
-    }
-
-    @media (max-width: 767px) {
-        #mobiriseBanner.container-banner {
-            height: 12rem;
-        }
-
-        #mobiriseBanner .banner {
-            min-height: 12rem;
-        }
-
-        @-webkit-keyframes animationBanner {
-            0% {
-                opacity: 0;
-                top: -12rem;
-            }
-
-            75% {
-                opacity: 0;
-                top: -12rem;
-            }
-
-            100% {
-                opacity: 1;
-                top: 0;
-            }
-        }
-
-        @-moz-keyframes animationBanner {
-            0% {
-                opacity: 0;
-                top: -12rem;
-            }
-
-            75% {
-                opacity: 0;
-                top: -12rem;
-            }
-
-            100% {
-                opacity: 1;
-                top: 0;
-            }
-        }
-
-        @-o-keyframes animationBanner {
-            0% {
-                opacity: 0;
-                top: -12rem;
-            }
-
-            75% {
-                opacity: 0;
-                top: -12rem;
-            }
-
-            100% {
-                opacity: 1;
-                top: 0;
-            }
-        }
-
-        @keyframes animationBanner {
-            0% {
-                opacity: 0;
-                top: -12rem;
-            }
-
-            75% {
-                opacity: 0;
-                top: -12rem;
-            }
-
-            100% {
-                opacity: 1;
-                top: 0;
-            }
-        }
-
-        @-webkit-keyframes animationHeight {
-            0% {
-                height: 0;
-            }
-
-            75% {
-                height: 0;
-            }
-
-            100% {
-                height: 12rem;
-            }
-        }
-
-        @-moz-keyframes animationHeight {
-            0% {
-                height: 0;
-            }
-
-            75% {
-                height: 0;
-            }
-
-            100% {
-                height: 12rem;
-            }
-        }
-
-        @-o-keyframes animationHeight {
-            0% {
-                height: 0;
-            }
-
-            75% {
-                height: 0;
-            }
-
-            100% {
-                height: 12rem;
-            }
-        }
-
-        @keyframes animationHeight {
-            0% {
-                height: 0;
-            }
-
-            75% {
-                height: 0;
-            }
-
-            100% {
-                height: 12rem;
-            }
-        }
-
-        @-webkit-keyframes animationClosing {
-            0% {
-                height: 12rem;
-                opacity: 1;
-            }
-
-            30% {
-                height: 12rem;
-                opacity: 0.5;
-            }
-
-            100% {
-                height: 0;
-                opacity: 0;
-            }
-        }
-
-        @-moz-keyframes animationClosing {
-            0% {
-                height: 12rem;
-                opacity: 1;
-            }
-
-            30% {
-                height: 12rem;
-                opacity: 0.5;
-            }
-
-            100% {
-                height: 0;
-                opacity: 0;
-            }
-        }
-
-        @-o-keyframes animationClosing {
-            0% {
-                height: 12rem;
-                opacity: 1;
-            }
-
-            30% {
-                height: 12rem;
-                opacity: 0.5;
-            }
-
-            100% {
-                height: 0;
-                opacity: 0;
-            }
-        }
-
-        @keyframes animationClosing {
-            0% {
-                height: 12rem;
-                opacity: 1;
-            }
-
-            30% {
-                height: 12rem;
-                opacity: 0.5;
-            }
-
-            100% {
-                height: 0;
-                opacity: 0;
-            }
-        }
-    }
-    </style>
       <meta name="google-site-verification" content="google7521ccb19fc25690">
 </head>
   
 
 <body>
-   
-
-  </head>
-<body>
-
-
-    <section data-bs-version="5.1" class="menu menu5 cid-ugTnEE6zPA" once="menu" id="menu05-1q">
-
+   <section class="menu menu5 cid-ugTnEE6zPA" id="menu05-1q">
         <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
     <div class="container">
         <div class="navbar-brand">
@@ -797,7 +329,7 @@
             </div>
         </nav>
     </section>
-                                
+
  <section data-bs-version="5.1" class="header18 cid-ugOa3JKo0P" data-bg-video="https://24hour.xn--kpry57d/path/to/祥安生命禮儀公司 0938-179-858 - Compressed with FlexClip.mp4" id="header18-1k">
 
         <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(166, 169, 156);"></div>
@@ -2113,24 +1645,56 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
     </section>
 
-<script src="https://r.mobirisesite.com/528007/assets/web/assets/jquery/jquery.min.js?rnd=1729176565085" defer></script>
-<script src="https://r.mobirisesite.com/528007/assets/bootstrap/js/bootstrap.bundle.min.js?rnd=1729176565085" defer></script>
-<script src="https://r.mobirisesite.com/528007/assets/parallax/jarallax.js?rnd=1729176565085" defer></script>
-<script src="https://r.mobirisesite.com/528007/assets/web/assets/cookies-alert-plugin/cookies-alert-core.js?rnd=1729176565085" defer></script>
-<script src="https://r.mobirisesite.com/528007/assets/web/assets/cookies-alert-plugin/cookies-alert-script.js?rnd=1729176565085" defer></script>
-<script src="https://r.mobirisesite.com/528007/assets/ytplayer/index.js?rnd=1729176565085" async></script>
-<script src="https://r.mobirisesite.com/528007/assets/dropdown/js/navbar-dropdown.js?rnd=1729176565085" defer></script>
-<script src="https://r.mobirisesite.com/528007/assets/vimeoplayer/player.js?rnd=1729176565085" defer></script>
-<script src="https://r.mobirisesite.com/528007/assets/embla/embla.min.js?rnd=1729176565085" defer></script>
-<script src="https://r.mobirisesite.com/528007/assets/embla/script.js?rnd=1729176565085" defer></script>
-<script src="https://r.mobirisesite.com/528007/assets/theme/js/script.js?rnd=1729176565085" defer></script>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Parallax -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.10.2/jarallax.min.js"></script>
+
+<!-- Cookie Alert -->
+<script src="https://cdn.jsdelivr.net/npm/cookies-alert@1.0.0/cookies-alert.min.js"></script>
+
+<!-- YouTube Player -->
+<script src="https://cdn.jsdelivr.net/npm/youtube-player@3.0.0/dist/YoutubePlayer.min.js"></script>
+
+<!-- Embla Carousel -->
+<script src="https://cdn.jsdelivr.net/npm/embla-carousel@4.0.0/embla.min.js"></script>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTop" style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 1000;">Top</button>
+
+<!-- Your Custom Scripts -->
 <script>
-  $(document).ready(function () {
-    // Initialize any required plugins or custom scripts here
+  $(document).ready(function() {
+    // Initialize jarallax
+    $('.jarallax').jarallax();
+
+    // Show or hide the scroll to top button based on scroll position
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 200) {
+            $('#scrollToTop').fadeIn();
+        } else {
+            $('#scrollToTop').fadeOut();
+        }
+    });
+
+    // Scroll to top when the button is clicked
+    $('#scrollToTop').click(function() {
+        $('html, body').animate({ scrollTop: 0 }, 800); // 滾動到頂部
+        return false;
+    });
   });
 </script>
                                 
-
+                                
 </body>
 </html>
