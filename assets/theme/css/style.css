@@ -1,958 +1,959 @@
-@charset "UTF-8";
-section {
-  background-color: #ffffff;
+@字符集“UTF-8”；
+部分 {
+  背景顏色：#ffffff；
 }
 
-body {
-  font-style: normal;
-  line-height: 1.5;
-  font-weight: 400;
-  color: #232323;
-  position: relative;
+身體 {
+  字體樣式：正常；
+  行高：1.5；
+  字體粗細：400；
+  顏色：#232323；
+  位置：相對；
 }
 
-button {
-  background-color: transparent;
-  border-color: transparent;
+按鈕 {
+  背景顏色：透明；
+  邊框顏色：透明；
 }
 
-.embla__button,
+.embla__按鈕，
 .carousel-control {
-  background-color: #edefea !important;
-  opacity: 0.8 !important;
-  color: #464845 !important;
-  border-color: #edefea !important;
+  背景顏色：#edefea！
+  不透明度：0.8！
+  顏色：#464845！
+  邊框顏色：#edefea！
 }
 
-.carousel .close,
+.carousel.close,
 .modalWindow .close {
-  background-color: #edefea !important;
-  color: #464845 !important;
-  border-color: #edefea !important;
-  opacity: 0.8 !important;
+  背景顏色：#edefea！
+  顏色：#464845！
+  邊框顏色：#edefea！
+  不透明度：0.8！
 }
 
-.carousel .close:hover,
-.modalWindow .close:hover {
-  opacity: 1 !important;
+.carousel .close：懸停，
+.modalWindow .close:懸停{
+  不透明度：1！
 }
 
 .carousel-indicators li {
-  background-color: #edefea !important;
-  border: 2px solid #464845 !important;
+  背景顏色：#edefea！
+  邊框：2px 實線#464845！
 }
 
 .carousel-indicators li:hover,
 .carousel-indicators li:active {
-  opacity: 0.8 !important;
+  不透明度：0.8！
 }
 
-.embla__button:hover,
-.carousel-control:hover {
-  background-color: #edefea !important;
-  opacity: 1 !important;
+.embla__button：懸停，
+.carousel-control:懸停{
+  背景顏色：#edefea！
+  不透明度：1！
 }
 
-.modalWindow-video-container {
-  height: 80%;
+.modalWindow-視訊容器 {
+  身高：80%；
 }
 
-section,
-.container,
+部分，
+。
 .container-fluid {
-  position: relative;
-  word-wrap: break-word;
+  位置：相對；
+  自動換行：斷詞；
 }
 
-a.mbr-iconfont:hover {
-  text-decoration: none;
+a.mbr-iconfont:懸停{
+  文字裝飾：無；
 }
 
-.article .lead p,
-.article .lead ul,
-.article .lead ol,
-.article .lead pre,
+.文章 .lead p,
+.文章.lead ul,
+.文章.lead ol,
+.文章.鉛預,
 .article .lead blockquote {
-  margin-bottom: 0;
+  底部邊距：0；
 }
 
-a {
-  font-style: normal;
-  font-weight: 400;
-  cursor: pointer;
+一個{
+  字體樣式：正常；
+  字體粗細：400；
+  遊標：指針；
 }
-a, a:hover {
-  text-decoration: none;
-}
-
-.mbr-section-title {
-  font-style: normal;
-  line-height: 1.3;
+一個，一個：懸停{
+  文字裝飾：無；
 }
 
-.mbr-section-subtitle {
-  line-height: 1.3;
+.mbr-節標題 {
+  字體樣式：正常；
+  行高：1.3；
 }
 
-.mbr-text {
-  font-style: normal;
-  line-height: 1.7;
+.mbr-部分-字幕{
+  行高：1.3；
+}
+
+.mbr-文本{
+  字體樣式：正常；
+  行高：1.7；
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6,
+小時2,
+小時3，
+小時4,
+小時5,
+小時6,
 .display-1,
-.display-2,
+.顯示-2,
 .display-4,
 .display-5,
 .display-7,
-span,
+跨度，
 p,
-a {
-  line-height: 1;
-  word-break: break-word;
-  word-wrap: break-word;
-  font-weight: 400;
+一個{
+  行高：1；
+  word-break: 斷詞；
+  自動換行：斷詞；
+  字體粗細：400；
 }
 
-b,
-strong {
-  font-weight: bold;
+乙、
+強的 {
+  字體粗細：粗體；
 }
 
-input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
-  transition-delay: 9999s;
-  -webkit-transition-property: background-color, color;
-  transition-property: background-color, color;
+輸入：-webkit-autofill，輸入：-webkit-autofill：懸停，輸入：-webkit-autofill：焦點，輸入：-webkit-autofill：活動{
+  轉換延遲：9999s；
+  -webkit-transition-property：背景顏色、顏色；
+  過渡屬性：背景顏色、顏色；
 }
 
-textarea[type=hidden] {
-  display: none;
+文字區域[類型=隱藏] {
+  顯示：無；
 }
 
-section {
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
+部分 {
+  背景位置：50% 50%；
+  背景重複：不重複；
+  背景大小：封面；
 }
-section .mbr-background-video,
-section .mbr-background-video-preview {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
+.mbr-背景影片部分，
+部分 .mbr-背景-影片-預覽 {
+  位置：絕對；
+  底部：0；
+  左：0；
+  右：0；
+  頂部：0；
 }
 
-.hidden {
-  visibility: hidden;
+.隱藏{
+  可見性：隱藏；
 }
 
 .mbr-z-index20 {
-  z-index: 20;
+  z 索引：20；
 }
 
-/*! Base colors */
-.mbr-white {
-  color: #ffffff;
+/*!基色*/
+.mbr-白色{
+  顏色：#ffffff；
 }
 
-.mbr-black {
-  color: #111111;
+.mbr-黑色{
+  顏色：#111111；
 }
 
 .mbr-bg-white {
-  background-color: #ffffff;
+  背景顏色：#ffffff；
 }
 
-.mbr-bg-black {
-  background-color: #000000;
+.mbr-bg-黑色{
+  背景顏色：#000000；
 }
 
-/*! Text-aligns */
+/*!文字對齊 */
 .align-left {
-  text-align: left;
+  文字對齊：左對齊；
 }
 
 .align-center {
-  text-align: center;
+  文字對齊：居中；
 }
 
 .align-right {
-  text-align: right;
+  文字對齊：右對齊；
 }
 
-/*! Font-weight  */
-.mbr-light {
-  font-weight: 300;
+/*!字體粗細*/
+.mbr-光{
+  字體粗細：300；
 }
 
-.mbr-regular {
-  font-weight: 400;
+.mbr-常規{
+  字體粗細：400；
 }
 
-.mbr-semibold {
-  font-weight: 500;
+.mbr-半粗體{
+  字體粗細：500；
 }
 
-.mbr-bold {
-  font-weight: 700;
+.mbr-粗體{
+  字體粗細：700；
 }
 
-/*! Media  */
-.media-content {
-  flex-basis: 100%;
+/*!媒體 */
+.媒體內容{
+  彈性基礎：100%；
 }
 
 .media-container-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  align-items: start;
+  顯示：柔性；
+  彎曲方向：行；
+  彈性包裹：包裹；
+  調整內容：居中；
+  對齊內容：居中；
+  對齊項目：開始；
 }
 .media-container-row .media-size-item {
-  width: 400px;
+  寬度：400px；
 }
 
 .media-container-column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  align-items: stretch;
+  顯示：柔性；
+  彈性方向：列；
+  彈性包裹：包裹；
+  調整內容：居中；
+  對齊內容：居中；
+  對齊項目：拉伸；
 }
 .media-container-column > * {
-  width: 100%;
+  寬度：100%；
 }
 
-@media (min-width: 992px) {
+@media（最小寬度：992px）{
   .media-container-row {
-    flex-wrap: nowrap;
+    彈性包裹：現在包裹；
   }
 }
-figure {
-  margin-bottom: 0;
-  overflow: hidden;
+數字 {
+  底部邊距：0；
+  溢出：隱藏；
 }
 
-figure[mbr-media-size] {
-  transition: width 0.1s;
+圖[mbr-媒體大小] {
+  過渡：寬度0.1s；
 }
 
-img,
-iframe {
-  display: block;
-  width: 100%;
+影像，
+內聯框架{
+  顯示：塊；
+  寬度：100%；
 }
 
-.card {
-  background-color: transparent;
-  border: none;
+。
+  背景顏色：透明；
+  邊框：無；
 }
 
 .card-box {
-  width: 100%;
+  寬度：100%；
 }
 
 .card-img {
-  text-align: center;
-  flex-shrink: 0;
-  -webkit-flex-shrink: 0;
+  文字對齊：居中；
+  彈性收縮：0；
+  -webkit-flex-收縮：0；
 }
 
-.media {
-  max-width: 100%;
-  margin: 0 auto;
+。
+  最大寬度：100%；
+  保證金：0 自動；
 }
 
-.mbr-figure {
-  align-self: center;
+.mbr-圖{
+  自我對齊：居中；
 }
 
 .media-container > div {
-  max-width: 100%;
+  最大寬度：100%；
 }
 
-.mbr-figure img,
+.mbr-圖img，
 .card-img img {
-  width: 100%;
+  寬度：100%；
 }
 
-@media (max-width: 991px) {
+@media（最大寬度：991px）{
   .media-size-item {
-    width: auto !important;
+    寬度：自動！
   }
-  .media {
-    width: auto;
+  。
+    寬度：自動；
   }
-  .mbr-figure {
-    width: 100% !important;
+  .mbr-圖{
+    寬度：100%！
   }
 }
-/*! Buttons */
-.mbr-section-btn {
-  margin-left: -0.6rem;
-  margin-right: -0.6rem;
-  font-size: 0;
+/*!按鈕*/
+.mbr-節-btn {
+  左邊距：-0.6rem；
+  右邊距：-0.6rem；
+  字體大小：0；
 }
 
 .btn {
-  font-weight: 600;
-  border-width: 1px;
-  font-style: normal;
-  margin: 0.6rem 0.6rem;
-  white-space: normal;
-  transition: all 0.2s ease-in-out;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  word-break: break-word;
+  字體粗細：600；
+  邊框寬度：1px；
+  字體樣式：正常；
+  餘裕：0.6rem 0.6rem；
+  空白：正常；
+  過渡：全部 0.2 秒緩入緩出；
+  顯示：內聯柔性；
+  對齊項目：居中；
+  調整內容：居中；
+  word-break: 斷詞；
 }
 
 .btn-sm {
-  font-weight: 600;
-  letter-spacing: 0px;
-  transition: all 0.3s ease-in-out;
+  字體粗細：600；
+  字母間距：0px；
+  過渡：全部 0.3 秒緩入緩出；
 }
 
 .btn-md {
-  font-weight: 600;
-  letter-spacing: 0px;
-  transition: all 0.3s ease-in-out;
+  字體粗細：600；
+  字母間距：0px；
+  過渡：全部 0.3 秒緩入緩出；
 }
 
 .btn-lg {
-  font-weight: 600;
-  letter-spacing: 0px;
-  transition: all 0.3s ease-in-out;
+  字體粗細：600；
+  字母間距：0px；
+  過渡：全部 0.3 秒緩入緩出；
 }
 
 .btn-form {
-  margin: 0;
+  保證金：0；
 }
-.btn-form:hover {
-  cursor: pointer;
+.btn-form:懸停{
+  遊標：指針；
 }
 
 nav .mbr-section-btn {
-  margin-left: 0rem;
-  margin-right: 0rem;
+  左邊距：0rem；
+  右邊距：0rem；
 }
 
-/*! Btn icon margin */
+/*! Btn 圖示邊距 */
 .btn .mbr-iconfont,
 .btn.btn-sm .mbr-iconfont {
-  order: 1;
-  cursor: pointer;
-  margin-left: 0.5rem;
-  vertical-align: sub;
+  訂單：1；
+  遊標：指針；
+  左邊距：0.5rem；
+  垂直對齊：子；
 }
 
 .btn.btn-md .mbr-iconfont,
 .btn.btn-md .mbr-iconfont {
-  margin-left: 0.8rem;
+  左邊距：0.8rem；
 }
 
-.mbr-regular {
-  font-weight: 400;
+.mbr-常規{
+  字體粗細：400；
 }
 
-.mbr-semibold {
-  font-weight: 500;
+.mbr-半粗體{
+  字體粗細：500；
 }
 
-.mbr-bold {
-  font-weight: 700;
+.mbr-粗體{
+  字體粗細：700；
 }
 
-[type=submit] {
-  -webkit-appearance: none;
+[類型=提交] {
+  -webkit-外觀：無；
 }
 
-/*! Full-screen */
-.mbr-fullscreen .mbr-overlay {
-  min-height: 100vh;
+/*!全螢幕 */
+.mbr-全螢幕 .mbr-覆蓋 {
+  最小高度：100vh；
 }
 
-.mbr-fullscreen {
-  display: flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  align-items: center;
-  min-height: 100vh;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+.mbr-全屏{
+  顯示：柔性；
+  顯示：-moz-flex；
+  顯示：-ms-flex；
+  顯示：-o-flex；
+  對齊項目：居中；
+  最小高度：100vh；
+  頂部填充：3rem；
+  底部填充：3rem；
 }
 
-/*! Map */
-.map {
-  height: 25rem;
-  position: relative;
+/*!地圖 */
+。
+  高度：25rem；
+  位置：相對；
 }
 .map iframe {
-  width: 100%;
-  height: 100%;
+  寬度：100%；
+  高度：100%；
 }
 
-/*! Scroll to top arrow */
-.mbr-arrow-up {
-  bottom: 25px;
-  right: 90px;
-  position: fixed;
-  text-align: right;
-  z-index: 5000;
-  color: #ffffff;
-  font-size: 22px;
+/*!捲動到頂部箭頭 */
+.mbr-向上箭頭{
+  底部：25 像素；
+  右：90 像素；
+  位置：固定；
+  文字對齊：右對齊；
+  z 索引：5000；
+  顏色：#ffffff；
+  字體大小：22px；
 }
 
-.mbr-arrow-up a {
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-  color: #fff;
-  display: inline-block;
-  height: 60px;
-  width: 60px;
-  border: 2px solid #fff;
-  outline-style: none !important;
-  position: relative;
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  text-align: center;
+.mbr-向上箭頭 a {
+  背景：rgba(0,0,0,0.2);
+  邊界半徑：50%；
+  顏色：#fff；
+  顯示：內聯塊；
+  高度：60 像素；
+  寬度：60 像素；
+  邊框：2px實線#fff；
+  大綱樣式：無！
+  位置：相對；
+  文字裝飾：無；
+  過渡：全部 0.3 秒緩入緩出；
+  遊標：指針；
+  文字對齊：居中；
 }
-.mbr-arrow-up a:hover {
-  background-color: rgba(0, 0, 0, 0.4);
+.mbr-向上箭：懸停{
+  背景顏色: rgba(0, 0, 0, 0.4);
 }
-.mbr-arrow-up a i {
-  line-height: 60px;
-}
-
-.mbr-arrow-up-icon {
-  display: block;
-  color: #fff;
+.mbr-向上箭頭 ai {
+  行高：60px；
 }
 
-.mbr-arrow-up-icon::before {
-  content: "›";
-  display: inline-block;
-  font-family: serif;
-  font-size: 22px;
-  line-height: 1;
-  font-style: normal;
-  position: relative;
-  top: 6px;
-  left: -4px;
-  transform: rotate(-90deg);
+.mbr-向上箭頭-圖示 {
+  顯示：塊；
+  顏色：#fff；
 }
 
-/*! Arrow Down */
-.mbr-arrow {
-  position: absolute;
-  bottom: 45px;
-  left: 50%;
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-  background-color: rgba(80, 80, 80, 0.5);
-  border-radius: 50%;
-  transform: translateX(-50%);
+.mbr-arrow-up-icon::之前{
+  內容： ”>”;
+  顯示：內聯塊；
+  字體系列：襯線體；
+  字體大小：22px；
+  行高：1；
+  字體樣式：正常；
+  位置：相對；
+  上：6 像素；
+  左：-4px；
+  變換：旋轉（-90度）；
 }
-@media (max-width: 767px) {
-  .mbr-arrow {
-    display: none;
+
+/*!向下箭頭 */
+.mbr-箭頭{
+  位置：絕對；
+  底部：45 像素；
+  左：50%；
+  寬度：60 像素；
+  高度：60 像素；
+  遊標：指針；
+  背景顏色: rgba(80, 80, 80, 0.5);
+  邊界半徑：50%；
+  變換：translateX(-50%)；
+}
+@media（最大寬度：767px）{
+  .mbr-箭頭{
+    顯示：無；
   }
 }
-.mbr-arrow > a {
-  display: inline-block;
-  text-decoration: none;
-  outline-style: none;
-  animation: arrowdown 1.7s ease-in-out infinite;
-  color: #ffffff;
+.mbr-箭頭 > a {
+  顯示：內聯塊；
+  文字裝飾：無；
+  輪廓樣式：無；
+  動畫：arrowdown 1.7s 緩入無限；
+  顏色：#ffffff；
 }
-.mbr-arrow > a > i {
-  position: absolute;
-  top: -2px;
-  left: 15px;
-  font-size: 2rem;
-}
-
-#scrollToTop a i::before {
-  content: "";
-  position: absolute;
-  display: block;
-  border-bottom: 2.5px solid #fff;
-  border-left: 2.5px solid #fff;
-  width: 27.8%;
-  height: 27.8%;
-  left: 50%;
-  top: 51%;
-  transform: translateY(-30%) translateX(-50%) rotate(135deg);
+.mbr-箭頭 > a > i {
+  位置：絕對；
+  頂部：-2px；
+  左：15 像素；
+  字體大小：2rem；
 }
 
-@keyframes arrowdown {
+#scrollToTop ai::之前{
+  內容： ””;
+  位置：絕對；
+  顯示：塊；
+  邊框底部：2.5px 實線#fff；
+  左邊框：2.5px 實線#fff；
+  寬度：27.8%；
+  身高：27.8%；
+  左：50%；
+  頂部：51%；
+  變換： 平移Y(-30%) 平移X(-50%) 旋轉(135deg)；
+}
+
+@關鍵影格arrowdown {
   0% {
-    transform: translateY(0px);
+    變換：translateY(0px);
   }
   50% {
-    transform: translateY(-5px);
+    變換：translateY(-5px);
   }
   100% {
-    transform: translateY(0px);
+    變換：translateY(0px);
   }
 }
-@media (max-width: 500px) {
-  .mbr-arrow-up {
-    left: 0;
-    right: 0;
-    text-align: center;
+@media（最大寬度：500px）{
+  .mbr-向上箭頭{
+    左：0；
+    右：0；
+    文字對齊：居中；
   }
 }
-/*Gradients animation*/
-@keyframes gradient-animation {
-  from {
-    background-position: 0% 100%;
-    animation-timing-function: ease-in-out;
+/*漸層動畫*/
+@keyframes 漸層動畫 {
+  從 {
+    背景位置：0% 100%；
+    動畫計時功能：緩入緩出；
   }
-  to {
-    background-position: 100% 0%;
-    animation-timing-function: ease-in-out;
+  到 {
+    背景位置：100% 0%；
+    動畫計時功能：緩入緩出；
   }
 }
-.bg-gradient {
-  background-size: 200% 200%;
-  animation: gradient-animation 5s infinite alternate;
-  -webkit-animation: gradient-animation 5s infinite alternate;
+.bg-梯度{
+  背景大小：200% 200%；
+  動畫：漸層動畫5s無限交替；
+  -webkit-animation：漸層動畫5秒無限交替；
 }
 
-.menu .navbar-brand {
-  display: -webkit-flex;
+.menu .navbar-品牌 {
+  顯示：-webkit-flex；
 }
-.menu .navbar-brand span {
-  display: flex;
-  display: -webkit-flex;
+.menu .navbar-品牌跨度 {
+  顯示：柔性；
+  顯示：-webkit-flex；
 }
 .menu .navbar-brand .navbar-caption-wrap {
-  display: -webkit-flex;
+  顯示：-webkit-flex；
 }
 .menu .navbar-brand .navbar-logo img {
-  display: -webkit-flex;
-  width: auto;
+  顯示：-webkit-flex；
+  寬度：自動；
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media（最小寬度：768px）和（最大寬度：991px）{
   .menu .navbar-toggleable-sm .navbar-nav {
-    display: -ms-flexbox;
+    顯示：-ms-flexbox；
   }
 }
-@media (max-width: 991px) {
+@media（最大寬度：991px）{
   .menu .navbar-collapse {
-    max-height: 93.5vh;
+    最大高度：93.5vh；
   }
   .menu .navbar-collapse.show {
-    overflow: auto;
+    溢出：自動；
   }
 }
-@media (min-width: 992px) {
+@media（最小寬度：992px）{
   .menu .navbar-nav.nav-dropdown {
-    display: -webkit-flex;
+    顯示：-webkit-flex；
   }
   .menu .navbar-toggleable-sm .navbar-collapse {
-    display: -webkit-flex !important;
+    顯示：-webkit-flex！
   }
   .menu .collapsed .navbar-collapse {
-    max-height: 93.5vh;
+    最大高度：93.5vh；
   }
   .menu .collapsed .navbar-collapse.show {
-    overflow: auto;
+    溢出：自動；
   }
 }
-@media (max-width: 767px) {
+@media（最大寬度：767px）{
   .menu .navbar-collapse {
-    max-height: 80vh;
+    最大高度：80vh；
   }
 }
 
 .nav-link .mbr-iconfont {
-  margin-right: 0.5rem;
+  右邊距：0.5rem；
 }
 
-.navbar {
-  display: -webkit-flex;
-  -webkit-flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-justify-content: space-between;
+.導覽列{
+  顯示：-webkit-flex；
+  -webkit-flex-wrap：換行；
+  -webkit-align-items：居中；
+  -webkit-justify-content：空間之間；
 }
 
 .navbar-collapse {
-  -webkit-flex-basis: 100%;
-  -webkit-flex-grow: 1;
-  -webkit-align-items: center;
+  -webkit-flex-basis：100%；
+  -webkit-flex-grow：1；
+  -webkit-align-items：居中；
 }
 
 .nav-dropdown .link {
-  padding: 0.667em 1.667em !important;
-  margin: 0 !important;
+  填充：0.667em 1.667em！
+  邊距：0！
 }
 
 .nav {
-  display: -webkit-flex;
-  -webkit-flex-wrap: wrap;
+  顯示：-webkit-flex；
+  -webkit-flex-wrap：換行；
 }
 
-.row {
-  display: -webkit-flex;
-  -webkit-flex-wrap: wrap;
+。
+  顯示：-webkit-flex；
+  -webkit-flex-wrap：換行；
 }
 
-.justify-content-center {
-  -webkit-justify-content: center;
+.justify-內容中心{
+  -webkit-justify-內容：居中；
 }
 
-.form-inline {
-  display: -webkit-flex;
+.form-內聯{
+  顯示：-webkit-flex；
 }
 
 .card-wrapper {
-  -webkit-flex: 1;
+  -webkit-flex：1；
 }
 
 .carousel-control {
-  z-index: 10;
-  display: -webkit-flex;
+  z 索引：10；
+  顯示：-webkit-flex；
 }
 
 .carousel-controls {
-  display: -webkit-flex;
+  顯示：-webkit-flex；
 }
 
-.media {
-  display: -webkit-flex;
+。
+  顯示：-webkit-flex；
 }
 
-.form-group:focus {
-  outline: none;
+.form-group:焦點{
+  概要：無；
 }
 
 .jq-selectbox__select {
-  padding: 7px 0;
-  position: relative;
+  內邊距：7px 0；
+  位置：相對；
 }
 
 .jq-selectbox__dropdown {
-  overflow: hidden;
-  border-radius: 10px;
-  position: absolute;
-  top: 100%;
-  left: 0 !important;
-  width: 100% !important;
+  溢出：隱藏；
+  邊框半徑：10px；
+  位置：絕對；
+  頂部：100%；
+  左：0！
+  寬度：100%！
 }
 
 .jq-selectbox__trigger-arrow {
-  right: 0;
-  transform: translateY(-50%);
+  右：0；
+  變換：翻譯Y(-50%)；
 }
 
 .jq-selectbox li {
-  padding: 1.07em 0.5em;
+  填充：1.07em 0.5em；
 }
 
-input[type=range] {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+輸入[類型=範圍] {
+  左填充：0！
+  右填充：0！
 }
 
-.modal-dialog,
-.modal-content {
-  height: 100%;
+.模態對話框，
+.modal-內容{
+  高度：100%；
 }
 
 .modal-dialog .carousel-inner {
-  height: calc(100vh - 1.75rem);
+  高度：計算（100vh - 1.75rem）；
 }
-@media (max-width: 575px) {
+@media（最大寬度：575px）{
   .modal-dialog .carousel-inner {
-    height: calc(100vh - 1rem);
+    高度：計算（100vh - 1rem）；
   }
 }
 
 .carousel-item {
-  text-align: center;
+  文字對齊：居中；
 }
 
 .carousel-item img {
-  margin: auto;
+  保證金：自動；
 }
 
 .navbar-toggler {
-  align-self: flex-start;
-  padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
-  line-height: 1;
-  background: transparent;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
+  自我對齊：彈性開始；
+  填充：0.25rem 0.75rem；
+  字體大小：1.25rem；
+  行高：1；
+  背景：透明；
+  邊框：1px實心透明；
+  邊界半徑：0.25rem；
 }
 
-.navbar-toggler:focus,
-.navbar-toggler:hover {
-  text-decoration: none;
-  box-shadow: none;
+.navbar-toggler：焦點，
+.navbar-toggler:懸停{
+  文字裝飾：無；
+  盒子陰影：無；
 }
 
 .navbar-toggler-icon {
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  vertical-align: middle;
-  content: "";
-  background: no-repeat center center;
-  background-size: 100% 100%;
+  顯示：內聯塊；
+  寬度：1.5em；
+  高度：1.5em；
+  垂直對齊：居中；
+  內容： ””;
+  背景：中心不重複中心；
+  背景大小：100% 100%；
 }
 
 .navbar-toggler-left {
-  position: absolute;
-  left: 1rem;
+  位置：絕對；
+  左：1rem；
 }
 
 .navbar-toggler-right {
-  position: absolute;
-  right: 1rem;
+  位置：絕對；
+  右：1rem；
 }
 
 .card-img {
-  width: auto;
+  寬度：自動；
 }
 
 .menu .navbar.collapsed:not(.beta-menu) {
-  flex-direction: column;
+  彈性方向：列；
 }
 
 .carousel-item.active,
-.carousel-item-next,
+.輪播-專案-下一個，
 .carousel-item-prev {
-  display: flex;
+  顯示：柔性；
 }
 
-.note-air-layout .dropup .dropdown-menu,
+.note-空氣佈局 .dropup .dropdown-menu,
 .note-air-layout .navbar-fixed-bottom .dropdown .dropdown-menu {
-  bottom: initial !important;
+  底部：初始！
 }
 
 html,
-body {
-  height: auto;
-  min-height: 100vh;
+身體 {
+  高度：自動；
+  最小高度：100vh；
 }
 
 .dropup .dropdown-toggle::after {
-  display: none;
+  顯示：無；
 }
 
-.form-asterisk {
-  font-family: initial;
-  position: absolute;
-  top: -2px;
-  font-weight: normal;
+.form-星號{
+  字體系列：初始；
+  位置：絕對；
+  頂部：-2px；
+  字體粗細：正常；
 }
 
 .form-control-label {
-  position: relative;
-  cursor: pointer;
-  margin-bottom: 0.357em;
-  padding: 0;
+  位置：相對；
+  遊標：指針；
+  邊距底部：0.357em；
+  填充：0；
 }
 
-.alert {
-  color: #ffffff;
-  border-radius: 0;
-  border: 0;
-  font-size: 1.1rem;
-  line-height: 1.5;
-  margin-bottom: 1.875rem;
-  padding: 1.25rem;
-  position: relative;
-  text-align: center;
+。
+  顏色：#ffffff；
+  邊界半徑：0；
+  邊框：0；
+  字體大小：1.1rem；
+  行高：1.5；
+  邊距-底部：1.875rem；
+  填充：1.25rem；
+  位置：相對；
+  文字對齊：居中；
 }
 .alert.alert-form::after {
-  background-color: inherit;
-  bottom: -7px;
-  content: "";
-  display: block;
-  height: 14px;
-  left: 50%;
-  margin-left: -7px;
-  position: absolute;
-  transform: rotate(45deg);
-  width: 14px;
+  背景顏色：繼承；
+  底部：-7px；
+  內容： ””;
+  顯示：塊；
+  高度：14px；
+  左：50%；
+  左邊距：-7px；
+  位置：絕對；
+  變換：旋轉（45度）；
+  寬度：14px；
 }
 
 .form-control {
-  background-color: #ffffff;
-  background-clip: border-box;
-  color: #232323;
-  line-height: 1rem !important;
-  height: auto;
-  padding: 1.2rem 2rem;
-  transition: border-color 0.25s ease 0s;
-  border: 1px solid transparent !important;
-  border-radius: 4px;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px 0px, rgba(0, 0, 0, 0.07) 0px 1px 3px 0px, rgba(0, 0, 0, 0.03) 0px 0px 0px 1px;
+  背景顏色：#ffffff；
+  背景剪輯：邊框框；
+  顏色：#232323；
+  行高：1rem！
+  高度：自動；
+  填充：1.2rem 2rem；
+  過渡：邊框顏色 0.25s 緩和 0s；
+  邊框：1px實心透明！
+  邊框半徑：4px；
+  框陰影： rgba(0, 0, 0, 0.07) 0px 1px 1px 0px, rgba(0, 0, 0, 0.07) 0px 1px 3px 0px, rgba(0, 0, 0px 1px 3px 0px, rgba(0, 0, 0px 0px) 0px 0px;
 }
-.form-active .form-control:invalid {
-  border-color: red;
-}
-
-.row > * {
-  padding-right: 1rem;
-  padding-left: 1rem;
+.form-active .form-control:無效 {
+  邊框顏色：紅色；
 }
 
-form .row {
-  margin-left: -0.6rem;
-  margin-right: -0.6rem;
-}
-form .row [class*=col] {
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
+.行> * {
+  右填充：1rem；
+  左填充：1rem；
 }
 
-form .mbr-section-btn {
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
+表格.行{
+  左邊距：-0.6rem；
+  右邊距：-0.6rem；
+}
+形式 .row [class*=col] {
+  左內邊距：0.6rem；
+  右內邊距：0.6rem；
 }
 
-form .form-check-input {
-  margin-top: 0.5;
+形式 .mbr-section-btn {
+  左內邊距：0.6rem；
+  右內邊距：0.6rem；
+}
+
+表單 .form-check-input {
+  上邊距：0.5；
 }
 
 textarea.form-control {
-  line-height: 1.5rem !important;
+  行高：1.5rem！
 }
 
 .form-group {
-  margin-bottom: 1.2rem;
+  下邊距：1.2rem；
 }
 
-.form-control,
-form .btn {
-  min-height: 48px;
+.表單控制，
+形式.btn {
+  最小高度：48px；
 }
 
-.gdpr-block label span.textGDPR input[name=gdpr] {
-  top: 7px;
+.gdpr-區塊標籤 span.textGDPR 輸入[name=gdpr] {
+  頂部：7 像素；
 }
 
-.form-control:focus {
-  box-shadow: none;
+.form-control:焦點{
+  盒子陰影：無；
 }
 
-:focus {
-  outline: none;
+：重點 {
+  概要：無；
 }
 
-.mbr-overlay {
-  background-color: #000;
-  bottom: 0;
-  left: 0;
-  opacity: 0.5;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 0;
-  pointer-events: none;
+.mbr-覆蓋{
+  背景顏色：#000；
+  底部：0；
+  左：0；
+  不透明度：0.5；
+  位置：絕對；
+  右：0；
+  頂部：0；
+  z 索引：0；
+  指針事件：無；
 }
 
-blockquote {
-  font-style: italic;
-  padding: 3rem;
-  font-size: 1.09rem;
-  position: relative;
-  border-left: 3px solid;
+區塊引用 {
+  字體樣式：斜體；
+  填充：3rem；
+  字體大小：1.09rem；
+  位置：相對；
+  左邊框：3px 實線；
 }
 
-ul,
-ol,
-pre,
-blockquote {
-  margin-bottom: 2.3125rem;
+烏爾，
+哦，
+預,
+區塊引用 {
+  邊距-底部：2.3125rem；
 }
 
 .mt-4 {
-  margin-top: 2rem !important;
+  邊距頂部：2rem！
 }
 
 .mb-4 {
-  margin-bottom: 2rem !important;
+  邊距底部：2rem！
 }
 
-.container,
+。
 .container-fluid {
-  padding-left: 16px;
-  padding-right: 16px;
+  左內邊距：16px；
+  右內邊距：16px；
 }
 
-.row {
-  margin-left: -16px;
-  margin-right: -16px;
+。
+  左邊距：-16px；
+  右邊距：-16px；
 }
-.row > [class*=col] {
-  padding-left: 16px;
-  padding-right: 16px;
+.row > [類*=col] {
+  左內邊距：16px；
+  右內邊距：16px；
 }
 
-@media (min-width: 992px) {
+@media（最小寬度：992px）{
   .container-fluid {
-    padding-left: 32px;
-    padding-right: 32px;
+    左內邊距：32px；
+    右內邊距：32px；
   }
 }
-@media (max-width: 991px) {
-  .mbr-container {
-    padding-left: 16px;
-    padding-right: 16px;
+@media（最大寬度：991px）{
+  .mbr-容器{
+    左內邊距：16px；
+    右內邊距：16px；
   }
 }
 .app-video-wrapper > img {
-  opacity: 1;
+  不透明度：1；
 }
 
 .app-video-wrapper {
-  background: transparent;
+  背景：透明；
 }
 
-.item {
-  position: relative;
+。
+  位置：相對；
 }
 
 .dropdown-menu .dropdown-menu {
-  left: 100%;
+  左：100%；
 }
 
 .dropdown-item + .dropdown-menu {
-  display: none;
+  顯示：無；
 }
 
-.dropdown-item:hover + .dropdown-menu,
-.dropdown-menu:hover {
-  display: block;
+.dropdown-item：懸停+ .dropdown-menu，
+.dropdown-menu:懸停{
+  顯示：塊；
 }
 
-@media (min-aspect-ratio: 16/9) {
-  .mbr-video-foreground {
-    height: 300% !important;
-    top: -100% !important;
+@media（最小縱橫比：16/9）{
+  .mbr-視頻-前景{
+    高度：300%！
+    頂部：-100%！
   }
 }
-@media (max-aspect-ratio: 16/9) {
-  .mbr-video-foreground {
-    width: 300% !important;
-    left: -100% !important;
+@media（最大縱橫比：16/9）{
+  .mbr-視頻-前景{
+    寬度：300%！
+    左：-100%！
   }
+}
 }
