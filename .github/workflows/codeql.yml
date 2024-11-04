@@ -1,4 +1,4 @@
-jobs: "CodeQL Advanced"
+name: "codeql advenved"
 
 on:
   push:
