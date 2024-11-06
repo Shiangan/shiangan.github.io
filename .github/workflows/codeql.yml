@@ -1,5 +1,4 @@
-name: "codeql advenved"
-
+name: "codeql.yml"
 on:
   push:
     branches: [ "main" ]
