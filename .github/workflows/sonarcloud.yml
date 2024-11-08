@@ -7,4 +7,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Run SonarCloud Scan
-        uses:
+        uses: SonarSource/sonarcloud-github-action@v1
+        with:
+          sonar-token: ${{ secrets.SONAR_TOKEN }}
