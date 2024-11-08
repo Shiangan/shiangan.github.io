@@ -108,7 +108,18 @@
 </script>
 </head>
 
-
+<style>
+    header, .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* 保持在其他元素之上 */
+}
+    main {
+    margin-top: 60px; /* 根據 header 的高度調整 */
+}
+</style>
+    
 <body>
    <section data-bs-version="5.1" class="menu menu5 cid-ugTnEE6zPA" once="menu" id="menu05-1q">
 
