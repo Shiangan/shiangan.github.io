@@ -1,12 +1,15 @@
-name: SonarCloud Scan
-on: [push]
-jobs:
+名稱: SonarCloud Scan
+開啟: [推]
+工作:
   sonarcloud:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v2
+
       - name: Run SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v1
         with:
-          sonar-token: ${{ secrets.SONAR_TOKEN }}
+          args: '-Dsonar.projectKey=your_project_key'
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
