@@ -14,9 +14,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Set up CodeQL
-      uses: github/codeql-action/setup@v2
-      with:
-        languages: javascript # 或其他語言
+      uses: github/codeql-action/setup@v2.1 # 嘗試使用最新的版本
 
     - name: Run CodeQL analysis
       uses: github/codeql-action/analyze@v2
