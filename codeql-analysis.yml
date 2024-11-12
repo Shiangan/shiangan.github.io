@@ -1,0 +1,27 @@
+name: CodeQL Analysis
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up CodeQL
+      uses: github/codeql-action/setup@v2
+
+    - name: Run CodeQL analysis
+      uses: github/codeql-action/analyze@v2
+      with:
+        # 指定 SARIF 輸出文件名稱
+        output: results.sarif
+
+    - name: Upload SARIF results
+      uses: github/codeql-action/upload-sarif@v2
+      with:
+        sarif_file: results.sarif  # 上傳結果文件
