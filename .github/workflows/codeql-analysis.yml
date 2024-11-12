@@ -1,0 +1,25 @@
+name: CodeQL
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up CodeQL
+      uses: github/codeql-action/setup@v2
+      with:
+        languages: javascript # 使用適合您的編程語言
+
+    - name: Run CodeQL analysis
+      uses: github/codeql-action/analyze@v2
+      with:
+        # 確保配置文件與您的進階設置匹配
+        configuration: custom_config.yml
