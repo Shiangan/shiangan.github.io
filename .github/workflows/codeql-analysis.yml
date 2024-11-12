@@ -1,6 +1,5 @@
 name: CodeQL Analysis
 
-# 當 main 分支有 push 或 pull_request 時觸發
 on:
   push:
     branches: [ main ]
@@ -17,25 +16,13 @@ jobs:
       security-events: write
 
     steps:
-    # 1. 檢出當前的儲存庫代碼
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    # 2. 初始化 CodeQL 並指定語言
     - name: Initialize CodeQL
-      uses: github/codeql-action/init@v2  # 確保版本號正確
+      uses: github/codeql-action/init@v2
       with:
-        languages: javascript  # 指定分析的語言，如 `javascript` 或 `python`
+        languages: javascript
 
-    # 3. 執行 CodeQL 分析
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
-      with:
-        output: codeql-results.sarif  # 指定 SARIF 文件名稱
-        category: "/language:javascript"
-
-    # 4. 上傳分析結果（SARIF 文件）
-    - name: Upload SARIF results
-      uses: github/codeql-action/upload-sarif@v2
-      with:
-        sarif_file: codeql-results.sarif  # 與分析步驟中指定的檔名一致
