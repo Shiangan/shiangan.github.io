@@ -1,0 +1,101 @@
+{
+  "name": "codeql",
+  "version": "3.27.1",
+  "private": true,
+  "description": "CodeQL action",
+  "scripts": {
+    "build": "tsc --build",
+    "test": "ava src/**.test.ts --serial --verbose",
+    "test-debug": "ava src/**.test.ts --serial --verbose --timeout=20m",
+    "lint": "eslint --report-unused-disable-directives --max-warnings=0 .",
+    "lint-fix": "eslint --report-unused-disable-directives --max-warnings=0 . --fix",
+    "lint-ci": "SARIF_ESLINT_IGNORE_SUPPRESSED=true eslint --report-unused-disable-directives --max-warnings=0 . --format @microsoft/eslint-formatter-sarif --output-file=eslint.sarif",
+    "removeNPMAbsolutePaths": "removeNPMAbsolutePaths . --force"
+  },
+  "ava": {
+    "typescript": {
+      "rewritePaths": {
+        "src/": "lib/"
+      },
+      "compile": false
+    }
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@actions/artifact": "^2.1.9",
+    "@actions/artifact-legacy": "npm:@actions/artifact@^1.1.2",
+    "@actions/cache": "^3.2.4",
+    "@actions/core": "^1.11.1",
+    "@actions/exec": "^1.1.1",
+    "@actions/github": "^5.1.1",
+    "@actions/glob": "^0.4.0",
+    "@actions/io": "^1.1.3",
+    "@actions/tool-cache": "^2.0.1",
+    "@chrisgavin/safe-which": "^1.0.2",
+    "@octokit/plugin-retry": "^5.0.2",
+    "@octokit/types": "^13.6.1",
+    "@schemastore/package": "0.0.10",
+    "@types/node-forge": "^1.3.11",
+    "@types/uuid": "^10.0.0",
+    "adm-zip": "^0.5.16",
+    "check-disk-space": "^3.4.0",
+    "console-log-level": "^1.4.1",
+    "del": "^6.1.1",
+    "fast-deep-equal": "^3.1.3",
+    "file-url": "^3.0.0",
+    "follow-redirects": "^1.15.9",
+    "fs": "0.0.1-security",
+    "get-folder-size": "^2.0.1",
+    "js-yaml": "^4.1.0",
+    "jsonschema": "1.4.1",
+    "long": "^5.2.3",
+    "node-forge": "^1.3.1",
+    "path": "^0.12.7",
+    "semver": "^7.6.3",
+    "uuid": "^11.0.1",
+    "zlib": "^1.0.5"
+  },
+  "//": [
+    "micromatch is an unspecified dependency of ava"
+  ],
+  "devDependencies": {
+    "@ava/typescript": "4.1.0",
+    "@eslint/compat": "^1.1.1",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.13.0",
+    "@microsoft/eslint-formatter-sarif": "^3.1.0",
+    "@types/adm-zip": "^0.5.5",
+    "@types/console-log-level": "^1.4.5",
+    "@types/follow-redirects": "^1.14.4",
+    "@types/get-folder-size": "^2.0.0",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "20.9.0",
+    "@types/semver": "^7.5.8",
+    "@types/sinon": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.11.0",
+    "@typescript-eslint/parser": "^8.11.0",
+    "ava": "^5.3.1",
+    "eslint": "^8.57.1",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-filenames": "^1.3.2",
+    "eslint-plugin-github": "^5.0.2",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-no-async-foreach": "^0.1.1",
+    "micromatch": "4.0.8",
+    "nock": "^13.5.5",
+    "removeNPMAbsolutePaths": "3.0.1",
+    "sinon": "^19.0.2",
+    "typescript": "^5.6.3"
+  },
+  "overrides": {
+    "@actions/tool-cache": {
+      "semver": ">=6.3.1"
+    },
+    "eslint-plugin-import": {
+      "semver": ">=6.3.1"
+    },
+    "eslint-plugin-jsx-a11y": {
+      "semver": ">=6.3.1"
+    }
+  }
+}

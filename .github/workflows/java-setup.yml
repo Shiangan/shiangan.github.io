@@ -1,0 +1,30 @@
+name: Set up JDK 11
+
+on:
+  push:
+    branches:
+      - main  # 或其他分支名稱，這是當 push 到指定分支時觸發工作流程
+  pull_request:
+    branches:
+      - main  # 當創建 PR 時也會觸發
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # 使用 Ubuntu 環境
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3  # 下載代碼庫的最新版本
+
+    - name: Set up JDK 11
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'       # 指定需要的 Java 版本
+        distribution: 'temurin'  # 指定 Java 發行版（temurin 是 Adoptium 提供的 OpenJDK）
+        cache: 'maven'           # 如果您使用 Maven，可以設置緩存（可選）
+
+    - name: Build with Maven
+      run: mvn clean install    # 使用 Maven 進行構建，根據需要可替換為其他構建命令
+
+    - name: Run tests
+      run: mvn test             # 運行單元測試

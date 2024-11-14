@@ -1,0 +1,36 @@
+name: CodeQL Analysis
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  codeql-analysis:
+    name: Run CodeQL analysis
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up CodeQL
+        uses: github/codeql-action/setup@v2
+        with:
+          languages: javascript  # 根據您的需要選擇語言
+
+      - name: Build code
+        run: npm install  # 如果使用 Node.js 項目，這一步很重要
+
+      - name: Run CodeQL analysis
+        run: |
+          codeql database create codeql-database --language=javascript
+          codeql database analyze codeql-database --format=sarif-latest --output=results.sarif
+
+      - name: Upload SARIF results
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: results.sarif
