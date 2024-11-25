@@ -53,7 +53,8 @@
     "path": "^0.12.7",
     "semver": "^7.6.3",
     "uuid": "^11.0.1",
-    "zlib": "^1.0.5"
+    "zlib": "^1.0.5",
+    "dompurify": "^3.2.1"
   },
   "//": [
     "micromatch is an unspecified dependency of ava"
