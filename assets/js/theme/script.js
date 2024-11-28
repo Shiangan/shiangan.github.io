@@ -1,7 +1,6 @@
 (function () {
     var $, isBuilder;
     var isJQuery = typeof jQuery == 'function';
-    var DOMPurify = require('dompurify');
     if (isJQuery) $ = jQuery;
     $ ? isBuilder = $('html').hasClass('is-builder')
     : isBuilder = document.querySelector('html').classList.contains('is-builder');
@@ -1127,8 +1126,7 @@
                     newVideo.setAttribute('controls', '')
                     newVideo.setAttribute('playsinline', '')
                     newVideo.setAttribute('loop', '');
-                    var sanitizedVideoURL = DOMPurify.sanitize(videoURL);
-                    newVideo.setAttribute('src', sanitizedVideoURL);
+                    newVideo.setAttribute('src', videoURL);
                     el.style.display = 'none';
                     newVideo.style.width = '100%';
                     el.after(newVideo);
