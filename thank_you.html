@@ -2,10 +2,74 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>感謝您的提交</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>感謝您的諮詢 - 祥安生命</title>
+    
+    <style>
+        body {
+            font-family: 'Kiwi Maru', 'Microsoft JhengHei', Arial, sans-serif;
+            margin: 0;
+            padding: 50px 20px;
+            background-color: #f4f7f6; /* 柔和背景色 */
+            color: #333;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* 讓內容垂直居中 */
+        }
+        .container {
+            max-width: 600px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #000; /* 使用黑色或深色系 */
+            margin-bottom: 20px;
+            font-size: 2.2em;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        .contact-number {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #d9534f; /* 醒目的紅色或橙色 */
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px 10px;
+            border: 2px solid #d9534f;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .contact-number:hover {
+            background-color: #d9534f;
+            color: #fff;
+        }
+    </style>
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Kiwi+Maru:300,400,500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kiwi+Maru:300,400,500&display=swap"></noscript>
 </head>
 <body>
-    <h1>感謝您的提交！</h1>
-    <p>禮儀師盡快與您聯繫，若有較為緊急，直接撥打24小時專線：0938-179-858。</p>
+    <div class="container">
+        <h1>感謝您的諮詢！</h1>
+        <p>
+            祥安生命已收到您的提交訊息，我們的專業禮儀師將會盡快與您聯繫。
+        </p>
+        <p>
+            若有較為**緊急**的需求，請立即撥打我們的 24 小時服務專線：
+        </p>
+        <p>
+            <a href="tel:+886938179858" class="contact-number">0938-179-858</a>
+        </p>
+        <p style="margin-top: 30px; font-size: 0.9em; color: #666;">
+            祥安生命：用心服務，陪伴您「道謝．道別． 道愛」
+        </p>
+    </div>
 </body>
 </html>
